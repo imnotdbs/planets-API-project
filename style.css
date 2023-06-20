@@ -1,0 +1,228 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    background-size: 100%;
+}
+
+/*Linhas de rotação*/
+.mercury-outline,.venus-outline-1,.earth-outline-1,.mars-outline-1,.jupiter-outline-1,.saturno-outline-1,.urans-outline-1,.neptune-outline-1{
+    border-radius: 50%;
+    border: 1px dotted #ddd9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Sol*/
+.sun{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: yellow;
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Mercurio*/
+.mercury{
+    height: 27px;
+    width: 27px;
+    background: brown;
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+    left: -10%;
+    transform: translateX(-50% -50%);
+    animation: orbit2 50s linear infinite;
+}
+.p-mercury{
+    color: white;
+    font-family: system-ui;
+    position: absolute;
+    left: -68px;
+    top: -11px;
+}
+.mercury-outline{
+    height: 145px;
+    width: 145px;
+}
+
+/*Venus*/
+.venus{
+    height: 43px;
+    width: 43px;
+    background: grey;
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: -10%;
+    top: 40%;
+    transform: translateX(-50% -50%);
+    animation: orbit2 50s linear infinite;
+}
+.p-venus{
+    color: white;
+    font-family: system-ui;
+    position: absolute;
+    left: -48px;
+    top: -11px;
+}
+.venus-outline-1{
+    height: 217px;
+    width: 217px;
+}
+
+/*Earth*/
+.earth{
+    height: 43px;
+    width: 43px;
+    background-image: url(img/terra.png);
+    background-size: 115%;  
+    border-radius: 50%;
+    position: absolute;
+    left: -9%;
+    top: 43%;
+    transform: translateX(-50% -50%);
+    animation: orbit2 50s linear infinite;
+}
+.p-earth{
+    color: white;
+    font-family: system-ui;
+    position: absolute;
+    left: -43px;
+    top: -2px;
+}
+.earth-outline-1{
+    height: 295px;
+    width: 295px;
+}
+
+/*Marte*/
+.mars{
+    height: 33px;
+    width: 33px;
+    background: red;
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: -5%;
+    top: 46%;
+    transform: translateX(-50% -50%);
+    animation: orbit2 50s linear infinite;
+}
+.p-mars{
+    color: white;
+    font-family: system-ui;
+    position: absolute;
+    left: -46px;
+    top: -5px;
+}
+.mars-outline-1{
+    height: 380px;
+    width: 380px;
+}
+
+/*Jupiter*/
+.jupiter{
+    height: 60px;
+    width: 60px;
+    background: rgb(165, 97, 42);
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: -6%;
+    top: 44%;
+    transform: translateX(-50% -50%);
+    animation: orbit2 50s linear infinite;
+}
+.p-jupiter{
+    color: white;
+    font-family: system-ui;
+    position: absolute;
+    left: -51px;
+    top: 5px;
+}
+.jupiter-outline-1{
+    height: 481px;
+    width: 481px;
+}
+
+/*Saturno*/
+.saturno{
+    height: 52px;
+    width: 52px;
+    background: white;
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: -5%;
+    top: 46%;
+    transform: translateX(-50% -50%);
+    animation: orbit2 50s linear infinite;
+}
+.p-saturno{
+    color: white;
+    font-family: system-ui;
+    position: absolute;
+    left: -58px;
+    top: -3px;
+}
+.saturno-outline-1{
+    height: 588px;
+    width: 588px;
+}
+
+/*Urano*/
+.urans{
+    height: 52px;
+    width: 52px;
+    background: cyan;
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: -4.5%;
+    top: 46%;
+    transform: translateX(-50% -50%);
+    animation: orbit2 50s linear infinite;
+}
+.p-urans{
+    color: white;
+    font-family: system-ui;
+    position: absolute;
+    left: -58px;
+    top: -3px;
+}
+.urans-outline-1{
+    height: 689px;
+    width: 689px;
+}
+
+/*Netuno*/
+.neptune{
+    height: 50px;
+    width: 50px;
+    background: blue;
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    left: -3%;
+    top: 46%;
+    transform: translateX(-50% -50%);
+}
+
+.p-neptune{
+    color: white;
+    font-family: system-ui;
+    position: absolute;
+    left: -58px;
+    top: -3px;
+}
+.neptune-outline-1{
+    height: 793px;
+    width: 793px;
+}
