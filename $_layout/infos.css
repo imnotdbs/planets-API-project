@@ -7,7 +7,7 @@
 body{
     margin: 0px;
     padding: 0px;
-    background: url(espaco.jpg);
+    background: url(img/espaco.jpg);
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -18,11 +18,22 @@ body{
 }
 
 /*Botões de planetas*/
-
+.botton{
+    justify-content: center;
+    align-items: center;
+    color: #80656f;
+}
+.mercury-botton, .venus-botton, .earth-botton, .mars-botton, .jupiter-botton, .saturn-botton, .urans-botton, .neptune-botton{
+    border: 1px solid #fff;
+    height: 30px;
+    width: 20px;
+    text-align: center;
+    cursor: none;
+}
 
 /*Planetas*/
 .mercury{
-    background: url(mapa_mercurio.jpg);
+    background: url(img/mapa_mercurio.jpg);
     background-size: 222%;
     border: 1px solid rgba(88, 87, 102, 0.3);
     width: 400px;
@@ -46,7 +57,7 @@ body{
 	width: 450px;
 }
 .venus{
-    background: url(mapa_venus.jpg);
+    background: url(img/mapa_venus.jpg);
     background-size: cover;
     border: 1px solid rgba(102, 72, 44, 0.3);
     width: 400px;
@@ -70,7 +81,7 @@ body{
 	width: 450px;
 }
 .earth{
-    background: url(mapa_terra.jpg);
+    background: url(img/mapa_terra.jpg);
     background-size: 222%;
     border: 1px solid rgba(26,18,101,0.3);
     width: 400px;
@@ -94,7 +105,7 @@ body{
 	width: 450px;
 }
 .mars{
-    background: url(mapa_marte.jpg);
+    background: url(img/mapa_marte.jpg);
     background-size: 200%;
     border: 1px solid rgba(26,18,101,0.3);
     width: 400px;
@@ -118,7 +129,7 @@ body{
 	width: 450px;
 }
 .jupiter{
-    background: url(mapa_jupiter.jpg);
+    background: url(img/mapa_jupiter.jpg);
     opacity: 90%;
     background-size: cover;
     border: 1px solid rgba(26,18,101,0.3);
@@ -151,18 +162,18 @@ body{
     border-radius: 50%;
     position: relative;
 }
-.saturn-planet, .isi-saturno{
+.saturn-planet, .isi-saturn{
     position: absolute;
     height: 400px;
     width: 400px;
     border-radius: 50%;
-    background: url(mapa_saturno.png);
+    background: url(img/mapa_saturno.png);
     background-size: cover;
     transform-style: preserve-3d;
     z-index: -100;
 }
 .isi-saturn{
-    background: url(mapa_saturno2.png);
+    background: url(img/mapa_saturno2.png);
     background-size: cover;
     z-index: -300;
 }
@@ -197,7 +208,7 @@ body{
 }
 
 .urans{
-    background: url(mapa_urano.jpg);
+    background: url(img/mapa_urano.jpg);
     background-size: cover;
     border: 1px solid rgba(26,18,101,0.3);
     width: 400px;
@@ -221,7 +232,7 @@ body{
 	width: 450px;
 }
 .neptune{
-    background: url(mapa_netuno.jpg);
+    background: url(img/mapa_netuno.jpg);
     background-size: cover;
     border: 1px solid rgba(26,18,101,0.3);
     width: 400px;

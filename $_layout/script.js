@@ -1,4 +1,4 @@
-var ring = document.getElementById('anel');
+var ring = document.getElementById('ring-saturn');
 var quantidadeCamadas = 17;
 
 for(i = 0; i < quantidadeCamadas; i++){
@@ -12,67 +12,65 @@ for(i = 0; i < quantidadeCamadas; i++){
 }
 
 //Mercurio
-var button1 = document.getElementById("mercury");
+var button1 = document.getElementById("mercury-botton");
 
 button1.addEventListener("click", function() {
-   var info = document.getElementById("info-mercury");
+   var info = document.getElementById("mercurio");
    info.classList.toggle("hide");
 })
 
 //Venus
-var button8 = document.getElementById("venus");
+var button8 = document.getElementById("venus-botton");
 
 button8.addEventListener("click", function() {
-   var info = document.getElementById("info-venus");
+   var info = document.getElementById("venus");
    info.classList.toggle("hide");
 })
 
 //Terra
-var button2 = document.getElementById("earth");
+var button2 = document.getElementById("earth-botton");
 
 button2.addEventListener("click", function() {
-   var info = document.getElementById("info-earth");
+   var info = document.getElementById("earth");
    info.classList.toggle("hide");
 })
 
 //Marte
-var button3 = document.getElementById("mars");
+var button3 = document.getElementById("mars-botton");
 
 button3.addEventListener("click", function() {
-   var info = document.getElementById("info-mars");
+   var info = document.getElementById("mars");
    info.classList.toggle("hide");
 })
 
 //Jupiter
-var button4 = document.getElementById("jupiter");
+var button4 = document.getElementById("jupiter-botton");
 
 button4.addEventListener("click", function() {
-   var info = document.getElementById("info-jupiter");
+   var info = document.getElementById("jupiter");
    info.classList.toggle("hide");
 })
 
 //Saturno
-var button5 = document.getElementById("saturno");
+var button5 = document.getElementById("saturn-botton");
 
 button5.addEventListener("click", function() {
-   var info = document.getElementById("info-saturno");
+   var info = document.getElementById("saturn");
    info.classList.toggle("hide");
 })
 
 //Urano
-var button6 = document.getElementById("urans");
+var button6 = document.getElementById("urans-botton");
 
 button6.addEventListener("click", function() {
-   var info = document.getElementById("info-urans");
+   var info = document.getElementById("urans");
    info.classList.toggle("hide");
 })
 
 //Netuno
-var button7 = document.getElementById("neptune");
+var button7 = document.getElementById("neptune-botton");
 
 button7.addEventListener("click", function() {
-   var info = document.getElementById("info-neptune");
+   var info = document.getElementById("neptune");
    info.classList.toggle("hide");
 })
-
-
