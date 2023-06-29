@@ -11,11 +11,33 @@ for(i = 0; i < quantidadeCamadas; i++){
     camadaSelecionada.style.transform = "translateZ(" + Math.sin(Math.PI/quantidadeCamadas * i) * 200 + "px) scale(" + Math.cos(Math.PI/quantidadeCamadas * i) + ")";
 }
 
+
+
+
+var zoomElement = document.querySelector("#mercury");
+let $zoom1 = 1;
+document.addEventListener("wheel", function (e) {
+    if (e.deltaY > 0) {
+        zoomElement.style.transform = `scale(${($zoom1 -= 0.06)})`
+    } else {
+        zoomElement.style.transform = `scale(${($zoom1 += 0.06)})`
+    }
+})
+
+
+
+
+
+
+
+
+
+
 //Mercurio
 var button1 = document.getElementById("mercury-botton");
 
 button1.addEventListener("click", function() {
-   var info = document.getElementById("mercurio");
+   var info = document.getElementById("mercury");
    info.classList.toggle("hide");
 })
 
@@ -74,3 +96,5 @@ button7.addEventListener("click", function() {
    var info = document.getElementById("neptune");
    info.classList.toggle("hide");
 })
+
+

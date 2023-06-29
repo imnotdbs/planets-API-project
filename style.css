@@ -15,7 +15,7 @@ body{
 }
 .planets{
     height: 100vh;
-    position: fixed;
+    position: absolute;
     width: 100%;
     top: 0;
     left: 0;
@@ -23,7 +23,10 @@ body{
     place-items: center;
 }
 
-
+@keyframes girar {
+    0% { background-position: 0 0;}
+	100%{ background-position: 0 -900px;}
+}
 /*Linhas de rotação*/
 .mercury-outline,.venus-outline-1,.earth-outline-1,.mars-outline-1,.jupiter-outline-1,.saturno-outline-1,.urans-outline-1,.neptune-outline-1{
     border-radius: 50%;
@@ -40,11 +43,11 @@ body{
     height: 95px;
     width: 95px;
     border-radius: 50%;
-    background-image: url(img/580b585b2edbce24c47b2714.png);
-    background-size: 128%;
+    background-image: url(img/sol.jpg);
+    background-size: 300%;
     background-position-x: 50%;
     background-position-y: 50%;
-    box-shadow: 0px 2px 30px #f65a1c;
+    box-shadow: 0px 0px 15px #f65a1c;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -52,19 +55,33 @@ body{
     transform: translate(-50%, -50%);
 }
 
+
 /*Mercurio*/
 .mercury{
     height: 21px;
     width: 21px;
-    background-image: url(img/mercurio.png);
-    background-size: 100%;
-    background-position-x: 50%;
-    background-position-y: 50%;
+    background-image: url(img/mapa_mercurio2.jpg);
+    background-size: 200%;
     border-radius: 50%;
     position: absolute;
     top: 42%;
     left: 42%;
+    opacity: 100%;
     z-index: 1;
+    transform: translateX(-50% -50%);
+    animation: rotationOrbitMercury 12s linear infinite, girar 120s linear infinite;
+}
+.mercury-shadow{
+    background: url(img/transparente.png);
+    height: 23px;
+    width: 23px;
+    opacity: 85%;
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 42%;
+    left: 42%;
+    z-index: 2;
     transform: translateX(-50% -50%);
     animation: rotationOrbitMercury 12s linear infinite;
 }
@@ -85,6 +102,7 @@ body{
     left: -68px;
     top: -11px;
 }
+
 .mercury-outline{
     height: 140px;
     width: 140px;
@@ -94,14 +112,27 @@ body{
 .venus{
     height: 30px;
     width: 30px;
-    background-image: url(img/venus.png);
-    background-size: 190%;
-    background-position-x: 50%;
-    background-position-y: 50%;
+    background-image: url(img/mapa_venus.jpg);
+    background-size: cover;
     border-radius: 50%;
     position: absolute;
     top: 42%;
     left: 42%;
+    z-index: 1;
+    transform: translateX(-50% -50%);
+    animation: rotationOrbitVenus 21s linear infinite, girar 120s linear infinite;
+}
+.venus-shadow{
+    height: 32px;
+    width: 32px;
+    opacity: 85;
+    background-image: url(img/transparente.png);
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 42%;
+    left: 42%;
+    z-index: 2;
     transform: translateX(-50% -50%);
     animation: rotationOrbitVenus 21s linear infinite;
 }
@@ -131,14 +162,28 @@ body{
 .earth{
     height: 31px;
     width: 31px;
-    background-image: url(img/terra.png);
-    background-size: 130%;
-    background-position-x: 50%;
-    background-position-y: 50%;
+    background-image: url(img/mapa_terra.jpg);
+    background-size: 105%;
     border-radius: 50%;
     position: absolute;
     top: 44%;
     left: 45%;
+    z-index: 1;
+    transform: translateX(-50% -50%);
+    animation: rotationOrbitEarth 31s linear infinite, girar 120s linear infinite;
+}
+
+.earth-shadow{
+    height: 31px;
+    width: 31px;
+    background-image: url(img/transparente.png);
+    background-size: 100%;
+    opacity: 75%;
+    border-radius: 50%;
+    position: absolute;
+    top: 44%;
+    left: 45%;
+    z-index: 2;
     transform: translateX(-50% -50%);
     animation: rotationOrbitEarth 31s linear infinite;
 }
@@ -163,11 +208,12 @@ body{
     width: 310px;
 }
 
+
 /*Marte*/
 .mars{
     height: 28px;
     width: 28px;
-    background-image: url(img/marte.png);
+    background-image: url(img/mapa_marte.jpg);
     background-size: cover;
     background-position-x: 50%;
     background-position-y: 50%;
@@ -175,6 +221,22 @@ body{
     position: absolute;
     top: 46%;
     left: 46%;
+    z-index: 1;
+    transform: translateX(-50% -50%);
+    animation: rotationOrbitMars 41s linear infinite, girar 120s linear infinite;
+}
+
+.mars-shadow{
+    height: 28px;
+    width: 28px;
+    background-image: url(img/transparente.png);
+    background-size: 100%;
+    opacity: 90%;
+    border-radius: 50%;
+    position: absolute;
+    top: 46%;
+    left: 46%;
+    z-index: 2;
     transform: translateX(-50% -50%);
     animation: rotationOrbitMars 41s linear infinite;
 }
@@ -203,7 +265,7 @@ body{
 .jupiter{
     height: 46px;
     width: 46px;
-    background-image: url(img/jupiter.png);
+    background-image: url(img/mapa_jupiter.jpg);
     background-position-x: 50%;
     background-position-y: 50%;
     background-size: 102%;
@@ -211,6 +273,22 @@ body{
     position: absolute;
     top: 45%;
     left: 45%;
+    z-index: 1;
+    transform: translateX(-50% -50%);
+    animation: rotationOrbitJupiter 69s linear infinite, girar 80s linear infinite;
+}
+
+.jupiter-shadow{
+    height: 47px;
+    width: 47px;
+    background-image: url(img/transparente.png);
+    background-size: 100%;
+    opacity: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    z-index: 2;
     transform: translateX(-50% -50%);
     animation: rotationOrbitJupiter 69s linear infinite;
 }
@@ -236,26 +314,74 @@ body{
 }
 
 /*Saturno*/
-.saturno{
-    height: 37px;
+.saturn{
     width: 37px;
-    background-image: url(img/saturno.png);
-    background-size: cover;
-    background-position-x: 50%;
-    background-position-y: 50%;
+    height: 37px;
+    top: 46.7%;
+    left: 46.7%;
     border-radius: 50%;
     position: absolute;
-    top: 47%;
-    left: 47%;
+    z-index: -99;
     transform: translateX(-50% -50%);
-    animation: rotationOrbitSaturn 82s linear infinite;
+    animation: rotationOrbitSaturn 80s linear infinite,  girar 80s linear infinite;;
+    
+}   
+.saturn-shadow{
+    height: 28px;
+    width: 28px;
+    background-image: url(img/transparente.png);
+    background-size: 100%;
+    opacity: 100%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    transform: translateX(-50% -50%);
+
 }
+.saturn-planet{
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background: url(img/mapa_saturno.jpg);
+    background-size: 200%;
+    z-index: -100;
+    transform-style: preserve-3d;
+}
+.ring-saturn{
+    top: -10%;
+    left: -9px;
+    right: 0;
+    margin: auto;
+    width: 35px;
+    height: 35px;
+    border: 0.8px dotted #d4d4d4;
+    border-right: 1px dotted transparent;
+    border-radius: 50%;
+    animation: animationRing1 24s linear infinite;
+    z-index: -200;
+}
+.ring-saturn, section{
+    position: absolute;
+    border-radius: 50%;
+    background-color: transparent;
+    transform-style: preserve-3d;
+}
+@keyframes animationRing1 {
+    0% {
+        transform: rotateX(-75deg) rotateY(-20deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(-75deg) rotateY(-20deg) rotateZ(360deg);
+    }
+}
+
 @keyframes rotationOrbitSaturn{
     0%{
-        transform: rotate(0) translateX(282px);
+        transform: rotate(0) translateX(284px);
     }
     100%{
-        transform: rotate(360deg) translateX(282px);
+        transform: rotate(360deg) translateX(284px);
     }
 }
 .p-saturno{
@@ -275,7 +401,7 @@ body{
 .urans{
     height: 34px;
     width: 34px;
-    background-image: url(img/urano.png);
+    background-image: url(img/mapa_urano.jpg);
     background-size: 109%;
     background-position-x: 50%;
     background-position-y: 50%;
@@ -283,6 +409,21 @@ body{
     position: absolute;
     top: 47%;
     left: 47.5%;
+    z-index: 1;
+    transform: translateX(-50% -50%);
+    animation: rotationOrbitUrans 100s linear infinite, girar 50s linear infinite;
+}
+.urans-shadow{
+    height: 36px;
+    width: 36px;
+    background-image: url(img/transparente.png);
+    background-size: 100%;
+    opacity: 85%;
+    border-radius: 50%;
+    position: absolute;
+    top: 47%;
+    left: 47.5%;
+    z-index: 2;
     transform: translateX(-50% -50%);
     animation: rotationOrbitUrans 100s linear infinite;
 }
@@ -311,7 +452,7 @@ body{
 .neptune{
     height: 35px;
     width: 35px;
-    background-image: url(img/netuno.png);
+    background-image: url(img/mapa_netuno.jpg);
     background-size: 150%;
     background-position-x: 50%;
     background-position-y: 50%;
@@ -319,8 +460,23 @@ body{
     position: absolute;
     top: 48%;
     left: 47.5%;
+    z-index: 1;
     transform: translateX(-50% -50%);
-    animation: rotationOrbitNeptune 120s linear infinite;
+    animation: rotationOrbitNeptune 120s linear infinite, girar 60s linear infinite;
+}
+.neptune-shadow{
+    height: 37px;
+    width: 37px;
+    background-image: url(img/transparente.png);
+    opacity: 85%;
+    background-size: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 48%;
+    left: 47.5%;
+    z-index: 2;
+    transform: translateX(-50% -50%);
+    animation: rotationOrbitNeptune 120s linear infinite, girar 60s linear infinite;
 }
 @keyframes rotationOrbitNeptune{
     0%{
