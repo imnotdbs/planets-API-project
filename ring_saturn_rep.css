@@ -1,0 +1,169 @@
+#ast-rep1 {
+    border: 2px dotted #80656f;
+    border-right: 3px dotted transparent;
+    opacity: 0.6;
+    left: -5px;
+    top: -5px;
+    width: 510px;
+    height: 510px;
+    animation: animationRing2 24s linear infinite;
+}
+#ast-rep2 {
+    border: 2px dotted #80656f;
+    border-left: 3px solid transparent;
+    opacity: 0.8;
+    left: -10px;
+    top: -10px;
+    width: 520px;
+    height: 520px;
+    animation: animationRing2 11s linear infinite;
+}
+
+#ast-rep3 {
+    border: 2px dotted #80656f;
+    border-left: 3px solid transparent;
+    opacity: 0.7;
+    left: -15px;
+    top: -15px;
+    width: 530px;
+    height: 530px;
+    animation: animationRing2 17s linear infinite;
+}
+#ast-rep4 {
+    border: 2px dotted #80656f;
+    border-top: 3px solid transparent;
+    opacity: 0.6;
+    left: -20px;
+    top: -20px;
+    width: 540px;
+    height: 540px;
+    animation: animationRing2 10s linear infinite;
+}
+#ast-rep5 {
+    border: 2px dotted #80656f;
+    border-top: 3px solid transparent;
+    opacity: 0.7;
+    left: -25px;
+    top: -25px;
+    width: 550px;
+    height: 550px;
+    animation: animationRing2 18s linear infinite;
+}
+#ast-rep6 {
+    border: 2px dotted #80656f;
+    border-bottom: 3px solid transparent;
+    opacity: 0.8;
+    left: -30px;
+    top: -30px;
+    width: 560px;
+    height: 560px;
+    animation: animationRing2 16s linear infinite;
+}
+#ast-rep7 {
+    border: 2px dotted #80656f;
+    border-left: 3px solid transparent;
+    opacity: 0.6;
+    left: -35px;
+    top: -35px;
+    width: 570px;
+    height: 570px;
+    animation: animationRing2 14s linear infinite;
+}
+#ast-rep8 {
+    border: 2px dotted #80656f;
+    border-left: 3px solid transparent;
+    opacity: 0.8;
+    left: -40px;
+    top: -40px;
+    width: 580px;
+    height: 580px;
+    animation: animationRing2 22s linear infinite;
+}
+#ast-rep9 {
+    border: 2px dotted #80656f;
+    border-top: 3px solid transparent;
+    opacity: 0.5;
+    left: -63px;
+    top: -63px;
+    width: 626px;
+    height: 626px;
+    animation: animationRing2 22s linear infinite;
+}
+#ast-rep10 {
+    border: 2px dotted #80656f;
+    border-left: 3px solid transparent;
+    opacity: 0.6;
+    left: -70px;
+    top: -70px;
+    width: 640px;
+    height: 640px;
+    animation: animationRing2 22s linear infinite;
+}
+#ast-rep11 {
+    border: 2px dotted #80656f;
+    border-top: 3px solid transparent;
+    opacity: 0.7;
+    left: -77px;
+    top: -77px;
+    width: 640px;
+    height: 640px;
+    animation: animationRing2 21s linear infinite;
+}
+#ast-rep12 {
+    border: 2px dotted #80656f;
+    border-bottom: 3px solid transparent;
+    opacity: 0.7;
+    left: -84px;
+    top: -84px;
+    width: 668px;
+    height: 668px;
+    animation: animationRing2 12s linear infinite;
+}
+#ast-rep13 {
+    border: 2px dotted #80656f;
+    border-bottom: 3px solid transparent;
+    opacity: 0.7;
+    left: -91px;
+    top: -91px;
+    width: 682px;
+    height: 682px;
+    animation: animationRing2 17s linear infinite;
+}
+#ast-rep14 {
+    border: 2px dotted #80656f;
+    border-left: 3px solid transparent;
+    opacity: 0.7;
+    left: -98px;
+    top: -98px;
+    width: 696px;
+    height: 696px;
+    animation: animationRing2 17s linear infinite;
+}#ast-rep15 {
+    border: 2px dotted #80656f;
+    border-left: 3px solid transparent;
+    opacity: 0.6;
+    left: -105px;
+    top: -105px;
+    width: 710px;
+    height: 710px;
+    animation: animationRing2 12s linear infinite;
+}
+#ast-rep16 {
+    border: 2px dotted #80656f;
+    border-top: 3px dotted transparent;
+    opacity: 0.5;
+    left: -112px;
+    top: -112px;
+    width: 724px;
+    height: 724px;
+    animation: animationRing2 23s linear infinite;
+}
+
+@keyframes animationRing2 {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(360deg);
+    }
+}

@@ -1,0 +1,292 @@
+@font-face {
+    src: url(fonte/FORCED\ SQUARE.ttf);
+    font-family: 'raleway-regular';
+    font-weight: normal;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background: url(img/espaco.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+.hide{
+    display: none;
+}
+
+
+/*Botões de planetas*/
+.botton{
+    justify-content: center;
+    align-items: center;
+    color: #80656f;
+}
+.mercury-botton, .venus-botton, .earth-botton, .mars-botton, .jupiter-botton, .saturn-botton, .urans-botton, .neptune-botton{
+    border: 1px solid #fff;
+    height: 30px;
+    width: 20px;
+    text-align: center;
+    cursor: none;
+}
+
+/*Planetas*/
+.mercury-info{
+    background: url(img/mapa_mercurio.jpg);
+    background-size: 222%;
+    border: 1px solid rgba(88, 87, 102, 0.3);
+    width: 400px;
+    height: 400px;
+    top: 22%;
+    left: 16%;
+    z-index: -9999;
+    border-radius: 50%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: girar 150s linear infinite;
+}
+.mercury-info:before{
+	content: "";
+	border-radius: 225px;
+	box-shadow: -150px -6px 25px rgba(0,0,0,0.7) inset;
+	left: 0px;
+	position:absolute;
+	top: -7px;
+	height: 450px;
+	width: 450px;
+}
+.venus-info{
+    background: url(img/mapa_venus.jpg);
+    background-size: cover;
+    border: 1px solid rgba(102, 72, 44, 0.3);
+    width: 400px;
+    height: 400px;
+    top: 22%;
+    left: 16%;
+    z-index: -9999;
+    border-radius: 50%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: girar 150s linear infinite;
+}
+.venus-info:before{
+	content: "";
+	border-radius: 225px;
+	box-shadow: -150px -6px 25px rgba(0,0,0,0.7) inset;
+	left: 0px;
+	position:absolute;
+	top: -7px;
+	height: 450px;
+	width: 450px;
+}
+.earth-info{
+    background: url(img/mapa_terra.jpg);
+    background-size: 222%;
+    border: 1px solid rgba(26,18,101,0.3);
+    width: 400px;
+    height: 400px;
+    top: 22%;
+    left: 16%;
+    z-index: -9999;
+    border-radius: 50%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: girar 150s linear infinite;
+}
+.earth-info:before{
+	content: "";
+	border-radius: 225px;
+	box-shadow: -150px -6px 25px rgba(0,0,0,0.7) inset;
+	left: 0px;
+	position:absolute;
+	top: -7px;
+	height: 450px;
+	width: 450px;
+}
+.mars-info{
+    background: url(img/mapa_marte.jpg);
+    background-size: 200%;
+    border: 1px solid rgba(26,18,101,0.3);
+    width: 400px;
+    height: 400px;
+    top: 22%;
+    left: 16%;
+    z-index: -9999;
+    border-radius: 50%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: girar 200s linear infinite;
+}
+.mars-info:before{
+	content: "";
+	border-radius: 225px;
+	box-shadow: -150px -6px 25px rgba(0,0,0,0.7) inset;
+	left: 0px;
+	position:absolute;
+	top: -7px;
+	height: 450px;
+	width: 450px;
+}
+.jupiter-info{
+    background: url(img/mapa_jupiter.jpg);
+    opacity: 90%;
+    background-size: cover;
+    border: 1px solid rgba(26,18,101,0.3);
+    width: 400px;
+    height: 400px;
+    top: 22%;
+    left: 16%;
+    z-index: -9999;
+    border-radius: 50%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: girar 150s linear infinite;
+}
+.jupiter-info:before{
+	content: "";
+	border-radius: 225px;
+	box-shadow: -150px -6px 25px rgba(0,0,0,0.7) inset;
+	left: 0px;
+	position:absolute;
+	top: -7px;
+	height: 450px;
+	width: 450px;
+}
+.saturn-info{
+    width: 400px;
+    height: 400px;
+    top: 25%;
+    left: 16%;
+    z-index: -9999;
+    border-radius: 50%;
+    position: relative;
+}
+.saturn-info:before{
+	content: "";
+	border-radius: 225px;
+	box-shadow: -270px -50px 25px rgba(0,0,0,0.7) inset;
+	left: 0px;
+	position:absolute;
+	top: -7px;
+	height: 540px;
+	width: 550px;
+}
+.saturn-planet, .isi-saturn{
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background: url(img/mapa_saturno.png);
+    background-size: cover;
+    transform-style: preserve-3d;
+    z-index: -100;
+}
+.isi-saturn{
+    background: url(img/mapa_saturno2.png);
+    background-size: cover;
+    z-index: -300;
+}
+
+.ring-saturn{
+    top: -10%;
+    left: -10%;
+    right: 0;
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    border: 2px dotted #80656f;
+    border-right: 3px dotted transparent;
+    border-radius: 50%;
+    animation: animationRing1 24s linear infinite;
+    z-index: -200;
+}
+.ring-saturn, section{
+    position: absolute;
+    background-color: transparent;
+    transform-style: preserve-3d;
+    border-radius: 50%;
+}
+
+.urans-info{
+    background: url(img/mapa_urano.jpg);
+    background-size: cover;
+    border: 1px solid rgba(26,18,101,0.3);
+    width: 400px;
+    height: 400px;
+    top: 22%;
+    left: 16%;
+    z-index: -9999;
+    border-radius: 50%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: girar 150s linear infinite;
+}
+.urans-info:before{
+	content: "";
+	border-radius: 225px;
+	box-shadow: -150px -6px 25px rgba(0,0,0,0.7) inset;
+	left: 0px;
+	position:absolute;
+	top: -7px;
+	height: 450px;
+	width: 450px;
+}
+.neptune-info{
+    background: url(img/mapa_netuno.jpg);
+    background-size: cover;
+    border: 1px solid rgba(26,18,101,0.3);
+    width: 400px;
+    height: 400px;
+    top: 22%;
+    left: 16%;
+    z-index: -9999;
+    border-radius: 50%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: girar 150s linear infinite;
+}
+.neptune-info:before{
+	content: "";
+	border-radius: 225px;
+	box-shadow: -150px -6px 25px rgba(0,0,0,0.7) inset;
+	left: 0px;
+	position:absolute;
+	top: -7px;
+	height: 450px;
+	width: 450px;
+}
+
+/*Animação dos planetas*/
+@keyframes animationRing1 {
+    0% {
+        transform: rotateX(-75deg) rotateY(-20deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(-75deg) rotateY(-20deg) rotateZ(360deg);
+    }
+}
+
+@keyframes girar {
+    0% { background-position: 0 0;}
+	100%{ background-position: -900px 0;}
+
+}
+
+/*Caixa de informações*/
+#info{
+    font-family: 'Raleway-Regular';
+    font-size: 2.80vh;
+    color: #fff;
+    padding: 1.5%;
+    background-color: #13ebff2b;
+    border-radius: 5px 50px 50px 100px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    height: 90vh;
+    width: 80vh;
+    position: fixed;
+    left: 880px;
+    top: 50px;
+}

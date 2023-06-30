@@ -12,26 +12,85 @@ for(i = 0; i < quantidadeCamadas; i++){
 }
 
 
-
-
 var zoomElement = document.querySelector("#mercury");
-let $zoom1 = 1;
+let $zoomMercury = 1;
 document.addEventListener("wheel", function (e) {
     if (e.deltaY > 0) {
-        zoomElement.style.transform = `scale(${($zoom1 -= 0.06)})`
+        zoomElement.style.transform = `scale(${($zoomMercury -= 0.06)})`
     } else {
-        zoomElement.style.transform = `scale(${($zoom1 += 0.06)})`
+        zoomElement.style.transform = `scale(${($zoomMercury += 0.06)})`
     }
 })
 
+var zoomElementVenus = document.querySelector("#venus");
+let $zoomVenus = 1;
+document.addEventListener("wheel", function (e) {
+    if (e.deltaY > 0) {
+        zoomElementVenus.style.transform = `scale(${($zoomVenus -= 0.06)})`
+    } else {
+        zoomElementVenus.style.transform = `scale(${($zoomVenus += 0.06)})`
+    }
+})
 
+var zoomElementEarth = document.querySelector("#earth");
+let $zoomEarth = 1;
+document.addEventListener("wheel", function (e) {
+    if (e.deltaY > 0) {
+        zoomElementEarth.style.transform = `scale(${($zoomEarth -= 0.06)})`
+    } else {
+        zoomElementEarth.style.transform = `scale(${($zoomEarth += 0.06)})`
+    }
+})
 
+var zoomElementMars = document.querySelector("#mars");
+let $zoomMars = 1;
+document.addEventListener("wheel", function (e) {
+    if (e.deltaY > 0) {
+        zoomElementMars.style.transform = `scale(${($zoomMars -= 0.06)})`
+    } else {
+        zoomElementMars.style.transform = `scale(${($zoomMars += 0.06)})`
+    }
+})
 
+var zoomElementJupiter = document.querySelector("#jupiter");
+let $zoomJupiter = 1;
+document.addEventListener("wheel", function (e) {
+    if (e.deltaY > 0) {
+        zoomElementJupiter.style.transform = `scale(${($zoomJupiter -= 0.06)})`
+    } else {
+        zoomElementJupiter.style.transform = `scale(${($zoomJupiter += 0.06)})`
+    }
+})
 
+var zoomElementSaturn = document.querySelector("#saturn");
+let $zoomSaturn = 1;
+document.addEventListener("wheel", function (e) {
+    if (e.deltaY > 0) {
+        zoomElementSaturn.style.transform = `scale(${($zoomSaturn -= 0.06)})`
+    } else {
+        zoomElementSaturn.style.transform = `scale(${($zoomSaturn += 0.06)})`
+    }
+})
 
+var zoomElementUrans = document.querySelector("#urans");
+let $zoomUrans = 1;
+document.addEventListener("wheel", function (e) {
+    if (e.deltaY > 0) {
+        zoomElementUrans.style.transform = `scale(${($zoomUrans -= 0.06)})`
+    } else {
+        zoomElementUrans.style.transform = `scale(${($zoomUrans += 0.06)})`
+    }
+})
 
-
-
+var zoomElementNeptune = document.querySelector("#neptune");
+let $zoomNeptune = 1;
+document.addEventListener("wheel", function (e) {
+    if (e.deltaY > 0) {
+        zoomElementNeptune.style.transform = `scale(${($zoomNeptune -= 0.06)})`
+    } else {
+        zoomElementNeptune.style.transform = `scale(${($zoomNeptune += 0.06)})`
+    }
+})
 
 //Mercurio
 var button1 = document.getElementById("mercury-botton");

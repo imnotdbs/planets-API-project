@@ -1,4 +1,4 @@
-#ast1 {
+#ast-planet1 {
     border: 0.8px dotted #d4d4d4;
     border-right: 0.8px dotted transparent;
     left: -4.2px;
@@ -7,7 +7,7 @@
     height: 42px;
     animation: animationRing2 24s linear infinite;
 }
-#ast2 {
+#ast-planet2 {
     border: 0.8px dotted #d4d4d4;
     border-left: 0.8px solid transparent;
     left: -7.2px;
@@ -17,7 +17,7 @@
     animation: animationRing2 11s linear infinite;
 }
 
-#ast3 {
+#ast-planet3 {
     border: 0.8px dotted #d4d4d4;
     border-left: 0.8px solid transparent;
     left: -9.8px;
@@ -26,7 +26,7 @@
     height: 53.5px;
     animation: animationRing2 1444447s linear infinite;
 }
-#ast4 {
+#ast-planet4 {
     border: 0.8px dotted #d4d4d4;
     border-top: 0.8px solid transparent;
     left: -12.2px;

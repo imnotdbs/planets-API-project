@@ -6,115 +6,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Solar</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="ring_saturn.css">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="ring_saturn_rep.css">
 </head>
-<body>
+<body>       
+
     <div id="planets" class="planets">
-        
         <div class="sun" id="sun"></div>
-
-        <div class="mercury-outline ">
-            <div class="mercury-shadow"></div>
-            <div class="mercury" id="mercury">
-                <p class="p-mercury"></p>
-            </div>
+        <div class="mercury-outline">
+            <div class="mercury-shadow" id="mercury-planet"></div>
+            <div class="mercury-planet"></div>
         </div>
-
         <div class="venus-outline-1 ">
-            <div class="venus-shadow"></div>
-            <div class="venus" id="venus">
-                <p class="p-venus"></p>
-            </div>
-         </div>
-
-     <div class="earth-outline-1">
-        <div class="earth-shadow"></div>
-        <div class="earth" id="earth">
-            <p class="p-earth"></p>
+            <div class="venus-shadow" id="venus-planet"></div>
+            <div class="venus-planet" ></div>
         </div>
-      </div>
-
-     <div class="mars-outline-1">
-        <div class="mars-shadow"></div>
-        <div class="mars" id="mars">
-            <p class="p-mars"></p>
+        <div class="earth-outline-1">
+            <div class="earth-shadow" id="earth-planet"></div>
+            <div class="earth-planet"></div>
         </div>
-      </div>
-
-      <div class="jupiter-outline-1">
-        <div class="jupiter-shadow"></div>
-        <div class="jupiter" id="jupiter">
-            <p class="p-jupiter"></p>
+        <div class="mars-outline-1">
+            <div class="mars-shadow" id="mars-planet"></div>
+            <div class="mars-planet"></div>
         </div>
-      </div>
-
+        <div class="jupiter-outline-1">
+            <div class="jupiter-shadow" id="jupiter-planet"></div>
+            <div class="jupiter-planet"></div>
+        </div>
         <div class="saturno-outline-1">
-
-            <div class="saturn" id="saturn">
+            <div class="saturn-planet" id="saturn-planet">
                 <div class="saturn-shadow"></div>
-                <div class="saturn-planet" id="saturn-planet"></div>
+                <div class="saturn-img" id="saturn-planet"></div>
                 <div class="ring-saturn" id="ring-saturn"></div>
             </div>
         </div>
-
         <div class="urans-outline-1">
-            <div class="urans-shadow"></div>
-            <div class="urans" id="urans">
-                <p class="p-urans"></p>
-            </div>
+            <div class="urans-shadow" id="urans-planet"></div>
+            <div class="urans-planet"></div>
         </div>
-
         <div class="neptune-outline-1">
-            <div class="neptune-shadow"></div>
-            <div class="neptune" id="neptune">
-                <p class="p-neptune"></p>
+            <div class="neptune-shadow" id="neptune-planet"></div>
+            <div class="neptune-planet"></div>
+        </div>
+    </div>
+
+    <div class="info-planet">
+
+        <div class="mercury hide" id="mercury">
+            <div class="mercury-rep" id="mercury-rep"></div>
+            <div class="info-mercury"></div>
+        </div>
+
+        <div class="venus hide" id="venus">
+            <div class="venus-rep" id="venus-rep"></div>
+            <div class="info-venus"></div>
+        </div>
+    
+        <div class="earth hide" id="earth">
+            <div class="earth-rep" id="earth-rep"></div>
+            <div class="info-earth"></div>
+        </div>
+    
+        <div class="mars hide" id="mars">
+            <div class="mars-rep" id="mars-rep"></div>
+            <div class="info-mars"></div>
+        </div>
+    
+        <div class="jupiter hide" id="jupiter">
+            <div class="jupiter-rep" id="jupiter-rep"></div>
+            <div class="info-jupiter"></div>
+        </div>
+    
+        <div class="saturn hide" id="saturn">
+            <div class="info-saturn"></div>
+            <div class="saturn-rep" id="saturn-rep">
+                <div class="saturn-planet-rep" id="saturn-planet-rep"></div>
+                <div class="isi-saturn-rep" id="isi-saturn-rep"></div>
+                <div class="ring-saturn-rep" id="ring-saturn-rep"></div>
             </div>
         </div>
 
-    </div>
-   <div class="planets-infos">
-    <div id="info-sun" class="hide">
-        <p class="text">
-           
-        </p>
-    </div>
-    <div id="info-mercury" class="hide">
-        <p class="text">
-        </p>
-    </div>
-    <div id="info-venus" class="hide">
-        <p class="text">
-        </p>
-    </div>
-    <div id="info-earth" class="hide">
-        <p class="text">
-        </p>
-    </div>
-    <div id="info-mars" class="hide">
-        <p class="text">
-        </p>
-    </div>
-    <div id="info-jupiter" class="hide">
-        <p class="text">
-        </p>
-    </div>
-    <div id="info-saturno" class="hide">
-        <p class="text">
-        </p>
-    </div>
-    <div id="info-urans" class="hide">
-        <p class="text">
-        </p>
-    </div>
-    <div id="info-neptune" class="hide">
-        <p class="text">
-        </p>
-    </div>
+        <div class="urans hide" id="urans">
+            <div class="urans-rep" id="urans-rep"></div>
+            <div class="info-urans"></div>
+        </div>
 
-   </div>
+        <div class="neptune hide" id="neptune">
+            <div class="neptune-rep" id="neptune-rep"></div>
+            <div class="info-neptune"></div>
+        </div>
+
+    </div>
+ 
+
     <script src="js/infos.js"></script>
-   <!--<script src="js/zoom.js"></script>-->
+    <script src="js/zoom.js"></script>
+
 </body>
 </html>
