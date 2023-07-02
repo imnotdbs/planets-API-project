@@ -14,6 +14,26 @@ body{
     width: 100%;
     position: fixed;
 }
+.loading{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #a3a3a3, #7a7a7a, #525252, #292929, #292929, #525252, #7a7a7a, #a3a3a3);
+    background-size: 200%;
+    animation: animation 2s linear infinite;
+    z-index: 99999;
+}
+
+@keyframes animation {
+    0%{
+        background-position: 0 0;
+    }
+    0%{
+        background-position: -500% 0;
+    }
+}
 
 /*Ocultar*/
 .hide{
@@ -31,20 +51,28 @@ body{
 }
 
 /*Sol*/
-.sun{
-    height: 95px;
-    width: 95px;
+.sun-index{
+    height: 90px;
+    width: 90px;
     border-radius: 50%;
     background-image: url(img/planets_index/sol.jpg);
-    background-size: 300%;
-    background-position-x: 50%;
-    background-position-y: 50%;
-    box-shadow: 0px 0px 15px #f65a1c;
+    background-size: 200%;
+    background-position-y: 850px;
+    box-shadow: 0px 0px 25px #f65a1c;
     position: absolute;
     left: 50%;
     top: 50%;
-    z-index: 1;
+    z-index: 9;
     transform: translate(-50%, -50%);
+    animation: giroSol 505s linear infinite;
+}
+.sun-index::before{
+	content: "";
+	border-radius: 50%;
+	box-shadow: 0px 0px 17px rgb(0, 0, 0) inset;
+	position:absolute;
+	height: 90px;
+	width: 90px;
 }
 
 /*Planetas*/
@@ -63,20 +91,6 @@ body{
     height: 141px;
     width: 141px;
 }
-.mercury-shadow{
-    background: url(img/transparente.png);
-    height: 23px;
-    width: 23px;
-    opacity: 85%;
-    background-size: 100%;
-    border-radius: 50%;
-    position: absolute;
-    top: 42%;
-    left: 42%;
-    z-index: 2;
-    transform: translateX(-50% -50%);
-    animation: rotationOrbitMercury 12s linear infinite;
-}
 .mercury-planet{
     height: 21px;
     width: 21px;
@@ -91,6 +105,23 @@ body{
     transform: translateX(-50% -50%);
     animation: rotationOrbitMercury 12s linear infinite, girar 120s linear infinite;
 }
+.mercury-planet::before{
+	content: "";
+	border-radius: 47%;
+	box-shadow: -7px 0px 3.9px rgba(0, 0, 0, 0.679) inset;
+	position:absolute;
+	height: 21px;
+	width: 21px;
+}
+.mercury-planet::after{
+	content: "";
+	border-radius: 50%;
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.626) inset;
+	position:absolute;
+	height: 21px;
+	width: 21px;
+}
+
 /*Animação da orbita de Mercurio*/
 @keyframes rotationOrbitMercury{
     0%{
@@ -107,20 +138,6 @@ body{
     height: 225px;
     width: 225px;
 }
-.venus-shadow{
-    height: 32px;
-    width: 32px;
-    opacity: 85;
-    background-image: url(img/transparente.png);
-    background-size: 100%;
-    border-radius: 50%;
-    position: absolute;
-    top: 42%;
-    left: 42%;
-    z-index: 2;
-    transform: translateX(-50% -50%);
-    animation: rotationOrbitVenus 21s linear infinite;
-}
 .venus-planet{
     height: 30px;
     width: 30px;
@@ -133,6 +150,22 @@ body{
     z-index: 1;
     transform: translateX(-50% -50%);
     animation: rotationOrbitVenus 21s linear infinite, girar 120s linear infinite;
+}
+.venus-planet::before{
+	content: "";
+	border-radius: 47%;
+	box-shadow: -10px 0px 3.9px rgba(0, 0, 0, 0.71) inset;
+	position:absolute;
+	height: 30px;
+	width: 30px;
+}
+.venus-planet::after{
+	content: "";
+	border-radius: 50%;
+	box-shadow: 0px 0px 5px rgb(0, 0, 0) inset;
+	position:absolute;
+	height: 30px;
+	width: 30px;
 }
 /*Animação da orbita de Venus*/
 @keyframes rotationOrbitVenus{
@@ -150,20 +183,6 @@ body{
     height: 310px;
     width: 310px;
 }
-.earth-shadow{
-    height: 31px;
-    width: 31px;
-    background-image: url(img/transparente.png);
-    background-size: 100%;
-    opacity: 75%;
-    border-radius: 50%;
-    position: absolute;
-    top: 44%;
-    left: 45%;
-    z-index: 2;
-    transform: translateX(-50% -50%);
-    animation: rotationOrbitEarth 31s linear infinite;
-}
 .earth-planet{
     height: 31px;
     width: 31px;
@@ -176,6 +195,22 @@ body{
     z-index: 1;
     transform: translateX(-50% -50%);
     animation: rotationOrbitEarth 31s linear infinite, girar 120s linear infinite;
+}
+.earth-planet::before{
+	content: "";
+	border-radius: 50%;
+	box-shadow: -10px 0px 3.9px rgba(0, 0, 0, 0.4) inset;
+	position:absolute;
+	height: 31px;
+	width: 31px;
+}
+.earth-planet::after{
+	content: "";
+	border-radius: 50%;
+	box-shadow: 0px 0px 5px rgb(0, 0, 0) inset;
+	position:absolute;
+	height: 31px;
+	width: 31px;
 }
 /*Animação da orbita da Terra*/
 @keyframes rotationOrbitEarth{
@@ -193,21 +228,6 @@ body{
     height: 395px;
     width: 395px;
 }
-
-.mars-shadow{
-    height: 28px;
-    width: 28px;
-    background-image: url(img/transparente.png);
-    background-size: 100%;
-    opacity: 90%;
-    border-radius: 50%;
-    position: absolute;
-    top: 46%;
-    left: 46%;
-    z-index: 2;
-    transform: translateX(-50% -50%);
-    animation: rotationOrbitMars 41s linear infinite;
-}
 .mars-planet{
     height: 28px;
     width: 28px;
@@ -222,6 +242,22 @@ body{
     z-index: 1;
     transform: translateX(-50% -50%);
     animation: rotationOrbitMars 41s linear infinite, girar 120s linear infinite;
+}
+.mars-planet::before{
+	content: "";
+	border-radius: 47%;
+	box-shadow: -10px 0px 3.9px rgba(0, 0, 0, 0.71) inset;
+	position:absolute;
+	height: 28px;
+	width: 28px;
+}
+.mars-planet::after{
+	content: "";
+	border-radius: 50%;
+	box-shadow: 0px 0px 5px rgb(0, 0, 0) inset;
+	position:absolute;
+	height: 28px;
+	width: 28px;
 }
 /*Animação da orbita de Marte*/
 @keyframes rotationOrbitMars{
@@ -239,20 +275,6 @@ body{
     height: 480px;
     width: 480px;
 }
-.jupiter-shadow{
-    height: 47px;
-    width: 47px;
-    background-image: url(img/transparente.png);
-    background-size: 100%;
-    opacity: 100%;
-    border-radius: 50%;
-    position: absolute;
-    top: 45%;
-    left: 45%;
-    z-index: 2;
-    transform: translateX(-50% -50%);
-    animation: rotationOrbitJupiter 69s linear infinite;
-}
 .jupiter-planet{
     height: 46px;
     width: 46px;
@@ -268,6 +290,23 @@ body{
     transform: translateX(-50% -50%);
     animation: rotationOrbitJupiter 69s linear infinite, girar 72s linear infinite;
 }
+.jupiter-planet::before{
+	content: "";
+	border-radius: 37.5%;
+	box-shadow: -11px 0px 3.9px rgba(0, 0, 0, 0.62) inset;
+	position:absolute;
+	height: 46px;
+	width: 46px;
+}
+.jupiter-planet::after{
+	content: "";
+	border-radius: 50%;
+	box-shadow: 0px 0px 16px rgb(0, 0, 0) inset;
+	position:absolute;
+	height: 46px;
+	width: 46px;
+}
+
 /*Animação da orbita de Jupiter*/
 @keyframes rotationOrbitJupiter{
     0%{
@@ -296,17 +335,21 @@ body{
     animation: rotationOrbitSaturn 80s linear infinite,  girar 60s linear infinite;;
     
 }   
-.saturn-shadow{
-    height: 28px;
-    width: 28px;
-    background-image: url(img/transparente.png);
-    background-size: 100%;
-    opacity: 100%;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 2;
-    transform: translateX(-50% -50%);
-
+.saturn-img::before{
+	content: "";
+	border-radius: 37%;
+	box-shadow: -8.5px 0px 3.9px rgba(0, 0, 0, 0.71) inset;
+	position:absolute;
+	height: 28px;
+	width: 28px;
+}
+.saturn-img::after{
+	content: "";
+	border-radius: 50%;
+	box-shadow: 0px 0px 4px rgb(0, 0, 0) inset;
+	position:absolute;
+	height: 28px;
+	width: 28px;
 }
 .saturn-img{
     position: absolute;
@@ -362,20 +405,6 @@ body{
     height: 650px;
     width: 650px;
 }
-.urans-shadow{
-    height: 36px;
-    width: 36px;
-    background-image: url(img/transparente.png);
-    background-size: 100%;
-    opacity: 85%;
-    border-radius: 50%;
-    position: absolute;
-    top: 47%;
-    left: 47.5%;
-    z-index: 2;
-    transform: translateX(-50% -50%);
-    animation: rotationOrbitUrans 100s linear infinite;
-}
 .urans-planet{
     height: 34px;
     width: 34px;
@@ -390,6 +419,22 @@ body{
     z-index: 1;
     transform: translateX(-50% -50%);
     animation: rotationOrbitUrans 100s linear infinite, girar 50s linear infinite;
+}
+.urans-planet::before{
+	content: "";
+	border-radius: 36.8%;
+	box-shadow: -10px 0px 3.9px rgba(0, 0, 0, 0.67) inset;
+	position:absolute;
+	height: 34px;
+	width: 34px;
+}
+.urans-planet::after{
+	content: "";
+	border-radius: 50%;
+	box-shadow: 0px 0px 5px rgb(0, 0, 0) inset;
+	position:absolute;
+	height: 34px;
+	width: 34px;
 }
 /*Animação da orbita de Urano*/
 @keyframes rotationOrbitUrans{
@@ -407,20 +452,6 @@ body{
     height: 735px;
     width: 735px;
 }
-.neptune-shadow{
-    height: 37px;
-    width: 37px;
-    background-image: url(img/transparente.png);
-    opacity: 85%;
-    background-size: 100%;
-    border-radius: 50%;
-    position: absolute;
-    top: 48%;
-    left: 47.5%;
-    z-index: 2;
-    transform: translateX(-50% -50%);
-    animation: rotationOrbitNeptune 120s linear infinite;
-}
 .neptune-planet{
     height: 35px;
     width: 35px;
@@ -436,6 +467,22 @@ body{
     transform: translateX(-50% -50%);
     animation: rotationOrbitNeptune 120s linear infinite, girar 60s linear infinite;
 }
+.neptune-planet::before{
+	content: "";
+	border-radius: 36.5%;
+	box-shadow: -10.5px 0px 3.9px rgba(0, 0, 0, 0.78) inset;
+	position:absolute;
+	height: 35px;
+	width: 35px;
+}
+.neptune-planet::after{
+	content: "";
+	border-radius: 50%;
+	box-shadow: 0px 0px 5px rgb(0, 0, 0) inset;
+	position:absolute;
+	height: 35px;
+	width: 35px;
+}
 /*Animação da orbita de Netuno*/
 @keyframes rotationOrbitNeptune{
     0%{
@@ -447,6 +494,49 @@ body{
 }
 
 /*//ABA INFORMAÇÕES//*/
+
+.sun-rep{
+    background: url(img/planets_info/sol.jpg);
+    background-size: 222%;
+    border: 1px solid #f65a1c7f;
+    box-shadow: 0px 0px 150px #f65a1c;
+    width: 500px;
+    height: 500px;
+    top: 17%;
+    left: 14%;
+    z-index: -9999;
+    border-radius: 50%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: girarInfo 400s linear infinite;
+}
+.sun-rep::before{
+	content: "";
+	border-radius: 50%;
+	box-shadow: 0px 0px 50px rgb(0, 0, 0) inset;
+	position: absolute;
+	height: 500px;
+	width: 500px;
+    left: -1px;
+    top: -1px;
+}
+
+.info-sun{
+    font-family: 'Raleway-Regular';
+    font-size: 2.80vh;
+    color: #fff;
+    padding: 1.5%;
+    background-color: #13ebff2b;
+    border-radius: 5px 50px 50px 100px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    height: 90vh;
+    width: 80vh;
+    position: absolute;
+    left: 58%;
+    top: 5%;
+}
+
 .mercury-rep{
     background: url(img/planets_info/mapa_mercurio.jpg);
     background-size: 222%;
@@ -463,13 +553,23 @@ body{
 }
 .mercury-rep:before{
 	content: "";
-	border-radius: 225px;
-	box-shadow: -150px -6px 25px rgba(0,0,0,0.7) inset;
+	border-radius: 50%;
+	box-shadow: -130px 0px 70px rgba(0, 0, 0, 0.6) inset;
 	left: 0px;
 	position:absolute;
-	top: -7px;
-	height: 450px;
-	width: 450px;
+	top: 0px;
+	height: 400px;
+	width: 400px;
+}
+.mercury-rep::after{
+	content: "";
+	border-radius: 50%;
+	box-shadow: 0px 0px 70px rgb(0, 0, 0) inset;
+	position: absolute;
+	height: 400px;
+	width: 400px;
+    left: -1px;
+    top: -1px;
 }
 .info-mercury{
     font-family: 'Raleway-Regular';
@@ -504,13 +604,21 @@ body{
 }
 .venus-rep:before{
 	content: "";
-	border-radius: 225px;
-	box-shadow: -150px -6px 25px rgba(0,0,0,0.7) inset;
-	left: 0px;
+	border-radius: 50%;
+	box-shadow: -130px 0px 70px rgba(0, 0, 0, 0.6) inset;
 	position:absolute;
-	top: -7px;
-	height: 450px;
-	width: 450px;
+	height: 400px;
+	width: 400px;
+}
+.venus-rep::after{
+	content: "";
+	border-radius: 50%;
+	box-shadow: 0px 0px 70px rgb(0, 0, 0) inset;
+	position: absolute;
+	height: 400px;
+	width: 400px;
+    left: -1px;
+    top: -1px;
 }
 .info-venus{
     font-family: 'Raleway-Regular';
@@ -544,13 +652,23 @@ body{
 }
 .earth-rep:before{
 	content: "";
-	border-radius: 225px;
-	box-shadow: -150px -6px 25px rgba(0,0,0,0.7) inset;
+	border-radius: 50%;
+	box-shadow: -130px 0px 50px rgba(0, 0, 0, 0.6) inset;
 	left: 0px;
 	position:absolute;
-	top: -7px;
-	height: 450px;
-	width: 450px;
+	top: 0px;
+	height: 400px;
+	width: 400px;
+}
+.earth-rep::after{
+	content: "";
+	border-radius: 50%;
+	box-shadow: 0px 0px 50px rgb(0, 0, 0, 0.6) inset;
+	position: absolute;
+	height: 400px;
+	width: 400px;
+    left: -1px;
+    top: -1px;
 }
 .info-earth{
     font-family: 'Raleway-Regular';
@@ -584,13 +702,23 @@ body{
 }
 .mars-rep:before{
 	content: "";
-	border-radius: 225px;
-	box-shadow: -150px -6px 25px rgba(0,0,0,0.7) inset;
+	border-radius: 50%;
+	box-shadow: -130px 0px 70px rgba(0, 0, 0, 0.65) inset;
 	left: 0px;
 	position:absolute;
-	top: -7px;
-	height: 450px;
-	width: 450px;
+	top: 0px;
+	height: 400px;
+	width: 400px;
+}
+.mars-rep::after{
+	content: "";
+	border-radius: 50%;
+	box-shadow: 0px 0px 70px rgb(0, 0, 0) inset;
+	position: absolute;
+	height: 400px;
+	width: 400px;
+    left: -1px;
+    top: -1px;
 }
 .info-mars{
     font-family: 'Raleway-Regular';
@@ -624,13 +752,23 @@ body{
 }
 .jupiter-rep:before{
 	content: "";
-	border-radius: 225px;
-	box-shadow: -150px -6px 25px rgba(0,0,0,0.7) inset;
+	border-radius: 50%;
+	box-shadow: -130px 0px 70px rgba(0, 0, 0, 0.65) inset;
 	left: 0px;
 	position:absolute;
-	top: -7px;
-	height: 450px;
-	width: 450px;
+	top: 0px;
+	height: 400px;
+	width: 400px;
+}
+.jupiter-rep::after{
+	content: "";
+	border-radius: 50%;
+	box-shadow: 0px 0px 70px rgb(0, 0, 0) inset;
+	position: absolute;
+	height: 400px;
+	width: 400px;
+    left: -1px;
+    top: -1px;
 }
 .info-jupiter{
     font-family: 'Raleway-Regular';
@@ -735,13 +873,23 @@ body{
 }
 .urans-rep:before{
 	content: "";
-	border-radius: 225px;
-	box-shadow: -150px -6px 25px rgba(0,0,0,0.7) inset;
+	border-radius: 50%;
+	box-shadow: -130px 0px 70px rgba(0, 0, 0, 0.65) inset;
 	left: 0px;
 	position:absolute;
-	top: -7px;
-	height: 450px;
-	width: 450px;
+	top: 0px;
+	height: 400px;
+	width: 400px;
+}
+.urans-rep::after{
+	content: "";
+	border-radius: 50%;
+	box-shadow: 0px 0px 70px rgb(0, 0, 0) inset;
+	position: absolute;
+	height: 400px;
+	width: 400px;
+    left: -1px;
+    top: -1px;
 }
 .info-urans{
     font-family: 'Raleway-Regular';
@@ -775,13 +923,23 @@ body{
 }
 .neptune-rep:before{
 	content: "";
-	border-radius: 225px;
-	box-shadow: -150px -6px 25px rgba(0,0,0,0.7) inset;
+	border-radius: 50%;
+	box-shadow: -130px 0px 70px rgba(0, 0, 0, 0.65) inset;
 	left: 0px;
 	position:absolute;
-	top: -7px;
-	height: 450px;
-	width: 450px;
+	top: 0px;
+	height: 400px;
+	width: 400px;
+}
+.neptune-rep::after{
+	content: "";
+	border-radius: 50%;
+	box-shadow: 0px 0px 70px rgb(0, 0, 0) inset;
+	position: absolute;
+	height: 400px;
+	width: 400px;
+    left: -1px;
+    top: -1px;
 }
 .info-neptune{
     font-family: 'Raleway-Regular';
@@ -802,6 +960,11 @@ body{
 @keyframes girar {
     0% { background-position: 0 0;}
 	100%{ background-position: 0 -900px;}
+}
+@keyframes giroSol {
+    0% { background-position: 0 0;}
+	100%{ background-position: 900px 0;}
+
 }
 @keyframes girarInfo {
     0% { background-position: 0 0;}

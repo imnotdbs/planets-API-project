@@ -1,9 +1,19 @@
-var zoomElement = document.querySelector("#mercury-rep");
-let $zoom = 1;
+var zoomElementMercury = document.querySelector("#mercury-rep");
+let $zoomMercury = 1;
 document.addEventListener("wheel", function (e) {
     if (e.deltaY > 0) {
-        zoomElement.style.transform = `scale(${($zoom -= 0.06)})`
+        zoomElementMercury.style.transform = `scale(${($zoomMercury -= 0.06)})`
     } else {
-        zoomElement.style.transform = `scale(${($zoom += 0.06)})`
+        zoomElementMercury.style.transform = `scale(${($zoomMercury += 0.06)})`
+    }
+})
+
+var zoomElementVenus = document.querySelector("#venus-rep");
+let $zoomVenus = 1;
+document.addEventListener("wheel", function (e) {
+    if (e.deltaY > 0) {
+        zoomElementVenus.style.transform = `scale(${($zoomVenus -= 0.06)})`
+    } else {
+        zoomElementVenus.style.transform = `scale(${($zoomVenus += 0.06)})`
     }
 })

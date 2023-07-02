@@ -22,15 +22,44 @@ for(i = 0; i < quantidadeCamadasRep; i++){
     camadaSelecionadaRep = document.getElementById("ast-rep" + i);
     camadaSelecionadaRep.style.transform = "translateZ(" + Math.sin(Math.PI/quantidadeCamadasRep * i) * 200 + "px) scale(" + Math.cos(Math.PI/quantidadeCamadasRep * i) + ")";
 }
+
+// Sol //
+function appearSun() {
+   var appearSun = document.getElementById("sun");
+   
+   appearSun.classList.toggle("hide");
+}function hideSun(){
+   var hideMercury = document.getElementById("planets");
+
+   hideMercury.classList.toggle("hide");
+}
+var buttonSun = document.getElementById("sun-index");
+buttonSun.addEventListener("click", function() {
+   showLoading();
+   hideMercury();
+   setTimeout(() => appearSun(), 200);
+})
+
+
+
 // Mercurio //
+function appearMercury() {
+   var appearMercury = document.getElementById("mercury");
+   
+   appearMercury.classList.toggle("hide");
+}
+function hideMercury(){
+   var hideMercury = document.getElementById("planets");
+
+   hideMercury.classList.toggle("hide");
+}
+
 var buttonMercury = document.getElementById("mercury-planet");
 
 buttonMercury.addEventListener("click", function() {
-   var appearMercury = document.getElementById("mercury");
-   var hideMercury = document.getElementById("planets");
-   
-   appearMercury.classList.toggle("hide");
-   hideMercury.classList.toggle("hide");
+   showLoading();
+   hideMercury();
+   setTimeout(() => appearMercury(), 200);
 })
 
 // Venus //
@@ -53,6 +82,17 @@ buttonEarth.addEventListener("click", function() {
    
    appearEarth.classList.toggle("hide");
    hideEarth.classList.toggle("hide");
+})
+
+// Terra //
+var buttonMars = document.getElementById("mars-planet");
+
+buttonMars.addEventListener("click", function() {
+   var appearMars = document.getElementById("mars");
+   var hideMars = document.getElementById("planets");
+   
+   appearMars.classList.toggle("hide");
+   hideMars.classList.toggle("hide");
 })
 
 // Jupiter //
