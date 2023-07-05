@@ -10,7 +10,7 @@ body{
     padding: 0px;
     background: url(img/espaco.jpg);
     background-size: cover;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     position: fixed;
 }
@@ -40,10 +40,137 @@ body{
     display: none;
 }
 
+/* Menu */
+.button{
+    position: relative;
+    top: 2%;
+    left: 1.5%;
+    width: 50px;
+    height: 50px;
+    background: #13ebff2b;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+    z-index: 9000000;
+    opacity: 25%;
+}
+.button.active{
+    background: transparent;
+}
+.button::before{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: #fff;
+    transition: 0.2s;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 0 #fff;
+}
+.button.active::before{
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 0 #fff;
+}
+.button::after{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: #fff;
+    transition: 0.2s;
+    transform: translateY(10px);
+}
+.button.active::after{
+    transform: translateY(0px) rotate(-45deg);
+}
+.button:hover{
+    opacity: 100%;
+}
+.back{
+    position: absolute;
+    top: 2%;
+    left: 1.5%;
+    width: 50px;
+    height: 50px;
+    background: #13ebff2b;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+    z-index: 9000000;
+    opacity: 25%;
+}
+.back::before{
+    content: '';
+    position: absolute;
+    padding: 10px;
+    box-shadow: 2px -2px 0 1px #fff inset;
+    border: solid transparent;
+    border-width: 0 0 2px 2px;
+    transform: rotate(45deg);
+}
+.back:hover{
+    opacity: 100%;
+}
+.menu{
+    position: absolute;
+    margin: 0;
+    z-index: 10999;
+    justify-content: center;
+    align-items: center;
+    background: #13ebff2b;
+    color: #fff;
+    border-radius: 5px 50px 50px 100px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    padding: 0.9%;
+    width: 27%;
+    height: 65%;
+    left: 1.5%;
+    top: 2%;
+    z-index: 1;
+}
+
+.bv{
+    color: rgba(167, 33, 33, 1);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 25px;
+    position: relative;
+    text-align: center;
+    top: -5px;
+}
+.text{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+}
+.logo-git{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    opacity: 100%;
+    left: 45%;
+    top: 85%;
+}
+.logo-git:hover{
+    vertical-align: middle;
+    transition: all 0.1s;
+    opacity: 40%;
+}
+
+
+
 /*Linhas de rotação*/
 .mercury-outline,.venus-outline-1,.earth-outline-1,.mars-outline-1,.jupiter-outline-1,.saturno-outline-1,.urans-outline-1,.neptune-outline-1{
     border-radius: 50%;
-    border: 1px dotted #ddd9;
+    border: 1px dotted rgba(221, 221, 221, 1);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -77,12 +204,14 @@ body{
 
 /*Planetas*/
 .planets{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
-    left: 0;
     place-items: center;
+}
+.left{
+    left: 10%;
 }
 
 /*Mercurio*/
@@ -125,10 +254,10 @@ body{
 /*Animação da orbita de Mercurio*/
 @keyframes rotationOrbitMercury{
     0%{
-        transform: rotate(0) translateX(70px);
+        transform: rotate(60deg) translateX(70px);
     }
     100%{
-        transform: rotate(360deg) translateX(70px);
+        transform: rotate(420deg) translateX(70px);
     }
 }
 
@@ -170,10 +299,10 @@ body{
 /*Animação da orbita de Venus*/
 @keyframes rotationOrbitVenus{
     0%{
-        transform: rotate(0) translateX(110px);
+        transform: rotate(-158deg) translateX(110px);
     }
     100%{
-        transform: rotate(360deg) translateX(110px);
+        transform: rotate(203deg) translateX(110px);
     }
 }
 
@@ -215,10 +344,10 @@ body{
 /*Animação da orbita da Terra*/
 @keyframes rotationOrbitEarth{
     0%{
-        transform: rotate(0) translateX(154px);
+        transform: rotate(-73deg) translateX(154px);
     }
     100%{
-        transform: rotate(360deg) translateX(154px);
+        transform: rotate(287deg) translateX(154px);
     }
 }
 
@@ -262,10 +391,10 @@ body{
 /*Animação da orbita de Marte*/
 @keyframes rotationOrbitMars{
     0%{
-        transform: rotate(0) translateX(197px);
+        transform: rotate(27deg) translateX(197px);
     }
     100%{
-        transform: rotate(360deg) translateX(197px);
+        transform: rotate(387deg) translateX(197px);
     }
 }
 
@@ -310,10 +439,10 @@ body{
 /*Animação da orbita de Jupiter*/
 @keyframes rotationOrbitJupiter{
     0%{
-        transform: rotate(0) translateX(236px);
+        transform: rotate(88deg) translateX(236px);
     }
     100%{
-        transform: rotate(360deg) translateX(236px);
+        transform: rotate(447deg) translateX(236px);
     }
 }
 
@@ -332,7 +461,7 @@ body{
     position: absolute;
     z-index: -99;
     transform: translateX(-50% -50%);
-    animation: rotationOrbitSaturn 80s linear infinite,  girar 60s linear infinite;;
+    animation: rotationOrbitSaturn 82s linear infinite,  girar 60s linear infinite;;
     
 }   
 .saturn-img::before{
@@ -392,10 +521,10 @@ body{
 /*Animação da orbita de Saturno*/
 @keyframes rotationOrbitSaturn{
     0%{
-        transform: rotate(0) translateX(284px);
+        transform: rotate(153deg) translateX(284px);
     }
     100%{
-        transform: rotate(360deg) translateX(284px);
+        transform: rotate(513deg) translateX(284px);
     }
 }
 
@@ -439,10 +568,10 @@ body{
 /*Animação da orbita de Urano*/
 @keyframes rotationOrbitUrans{
     0%{
-        transform: rotate(0) translateX(323px);
+        transform: rotate(238deg) translateX(323px);
     }
     100%{
-        transform: rotate(360deg) translateX(323px);
+        transform: rotate(598deg) translateX(323px);
     }
 }
 
@@ -486,10 +615,10 @@ body{
 /*Animação da orbita de Netuno*/
 @keyframes rotationOrbitNeptune{
     0%{
-        transform: rotate(0) translateX(367px);
+        transform: rotate(38deg) translateX(367px);
     }
     100%{
-        transform: rotate(360deg) translateX(367px);
+        transform: rotate(398deg) translateX(367px);
     }
 }
 
@@ -796,13 +925,23 @@ body{
 }
 .saturn-rep:before{
 	content: "";
-	border-radius: 225px;
-	box-shadow: -270px -50px 25px rgba(0,0,0,0.68) inset;
-	left: 17%;
+	border-radius: 50%;
+	box-shadow: -130px 0px 50px rgba(0, 0, 0, 0.6) inset;
+    position: absolute;
+	left: 16%;
+	top: 22%;
+	height: 401px;
+	width: 401px;
+}
+.saturn-rep::after{
+	content: "";
+	border-radius: 50%;
+	box-shadow: 0px 0px 50px rgba(0, 0, 0, 1) inset;
 	position: absolute;
-	top: -7px;
-	height: 540px;
-	width: 550px;
+	height: 400px;
+	width: 400px;
+    left: 16%;
+    top: 22%;
 }
 .saturn-planet-rep, .isi-saturn-rep{
     position: absolute;
@@ -822,7 +961,7 @@ body{
     z-index: -300;
 }
 .ring-saturn-rep{
-    top: 5%;
+    top: 9%;
     left: 2%;
     right: 0;
     margin: auto;

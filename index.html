@@ -7,14 +7,28 @@
     <title>Sistema Solar</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="ring_saturn.css">
     <link rel="stylesheet" href="ring_saturn_rep.css">
 </head>
 <body>
+    
+    <div id="button" class="button"></div>
 
-    <div id="planets" class="planets">
+    <div id="menu" class="menu hide">
+
+        <p class="bv">Seja bem-vindo</p>
+        <p class="text">Olá viajante, bem-vindo ao sistema solar! <br>Este site contem algumas informações sobre alguns astros que estão presentes em nossa galaxia, a Via Lactea. <br> Para ter acesso as informações, basta clicar em cima do planeta ou astro que desejar. <br> Tenha uma incrivel esperiencia e aproveite essa viajem!</p>
+
+        <ul>
+            <li><a href="#">Sobre Nós</a></li>
+        </ul>
+        <a href=""><img src=""></a>
+        <a href="https://github.com/imnotdbs/planets-API-project" target="_blank"><img src="img/githublogo.png" class="logo-git"></a>
+
+    </div>
+
+    <div id="planets" class="planets ">
         
         <div class="sun-index" id="sun-index"></div>
 
@@ -47,7 +61,7 @@
         </div>
     </div>
 
-    <div class="info-planet">
+    <div id="info-planets" class="info-planets">
 
         <div class="sun hide" id="sun">
             <div class="sun-rep" id="sun-rep"></div>
@@ -100,10 +114,11 @@
 
     </div>
 
+    <script src="js/API.js"></script>
     <script src="js/loading.js"></script>
     <script src="js/infos.js"></script>
     <script src="js/zoom.js"></script>
-
+    <script src="js/menu.js"></script>
 </body>
 
 </html>

@@ -23,20 +23,43 @@ for(i = 0; i < quantidadeCamadasRep; i++){
     camadaSelecionadaRep.style.transform = "translateZ(" + Math.sin(Math.PI/quantidadeCamadasRep * i) * 200 + "px) scale(" + Math.cos(Math.PI/quantidadeCamadasRep * i) + ")";
 }
 
+// Esconder o botão da tela principal //
+function hideMenuButton(){
+   var hideMenuButton = document.getElementById("button");
+
+   hideMenuButton.remove()
+}
+
+function appearBack(){
+   let appearBack = document.getElementById ("info-planets");
+   let createBack = document.createElement("div");
+   createBack.id = "back";
+   createBack.className = "back";
+   appearBack.appendChild(createBack);
+}
+function back() {
+   let back = document.getElementById("back")
+   back.addEventListener("click", function(){
+      window.location.reload();
+   })
+}
 // Sol //
 function appearSun() {
    var appearSun = document.getElementById("sun");
    
    appearSun.classList.toggle("hide");
 }function hideSun(){
-   var hideMercury = document.getElementById("planets");
+   var hideSun = document.getElementById("planets");
 
-   hideMercury.classList.toggle("hide");
+   hideSun.classList.toggle("hide");
 }
 var buttonSun = document.getElementById("sun-index");
 buttonSun.addEventListener("click", function() {
-   showLoading();
-   hideMercury();
+   hideSun();
+   hideMenuButton();
+   appearBack();
+   back();
+   require("Sun");
    setTimeout(() => appearSun(), 200);
 })
 
@@ -53,88 +76,161 @@ function hideMercury(){
 
    hideMercury.classList.toggle("hide");
 }
-
 var buttonMercury = document.getElementById("mercury-planet");
-
 buttonMercury.addEventListener("click", function() {
-   showLoading();
    hideMercury();
+   hideMenuButton();
+   appearBack();
+   back();
+   require("Mercury");
    setTimeout(() => appearMercury(), 200);
 })
 
 // Venus //
-var buttonVenus = document.getElementById("venus-planet");
-
-buttonVenus.addEventListener("click", function() {
+function appearVenus() {
    var appearVenus = document.getElementById("venus");
-   var hideVenus = document.getElementById("planets");
    
    appearVenus.classList.toggle("hide");
+}
+function hideVenus(){
+   var hideVenus = document.getElementById("planets");
+
    hideVenus.classList.toggle("hide");
+}
+var buttonVenus = document.getElementById("venus-planet");
+buttonVenus.addEventListener("click", function() {
+   hideVenus();
+   hideMenuButton();
+   appearBack();
+   back();
+   require("Venus");
+   setTimeout(() => appearVenus(), 200);
 })
 
 // Terra //
-var buttonEarth = document.getElementById("earth-planet");
-
-buttonEarth.addEventListener("click", function() {
+function appearEarth() {
    var appearEarth = document.getElementById("earth");
-   var hideEarth = document.getElementById("planets");
    
    appearEarth.classList.toggle("hide");
+}
+function hideEarth(){
+   var hideEarth = document.getElementById("planets");
+
    hideEarth.classList.toggle("hide");
+}
+var buttonEarth = document.getElementById("earth-planet");
+buttonEarth.addEventListener("click", function() {
+   hideEarth();
+   hideMenuButton();
+   appearBack();
+   back();
+   require("Earth");
+   setTimeout(() => appearEarth(), 200);
 })
 
-// Terra //
-var buttonMars = document.getElementById("mars-planet");
-
-buttonMars.addEventListener("click", function() {
+// Marte //
+function appearMars() {
    var appearMars = document.getElementById("mars");
-   var hideMars = document.getElementById("planets");
    
    appearMars.classList.toggle("hide");
+}
+function hideMars(){
+   var hideMars = document.getElementById("planets");
+
    hideMars.classList.toggle("hide");
+}
+var buttonMars = document.getElementById("mars-planet");
+buttonMars.addEventListener("click", function() {
+   hideMars();
+   hideMenuButton();
+   appearBack();
+   back();
+   require("Mars");
+   setTimeout(() => appearMars(), 200);
 })
+
 
 // Jupiter //
-var buttonJupiter = document.getElementById("jupiter-planet");
-
-buttonJupiter.addEventListener("click", function() {
+function appearJupiter() {
    var appearJupiter = document.getElementById("jupiter");
-   var hideJupiter = document.getElementById("planets");
    
    appearJupiter.classList.toggle("hide");
+}
+function hideJupiter(){
+   var hideJupiter = document.getElementById("planets");
+
    hideJupiter.classList.toggle("hide");
+}
+var buttonJupiter = document.getElementById("jupiter-planet");
+buttonJupiter.addEventListener("click", function() {
+   hideJupiter();
+   hideMenuButton();
+   appearBack();
+   back();
+   require("Jupiter");
+   setTimeout(() => appearJupiter(), 200);
 })
 
-// Saturno //
-var buttonSaturn = document.getElementById("saturn-planet");
 
-buttonSaturn.addEventListener("click", function() {
+// Saturno //
+function appearSaturn() {
    var appearSaturn = document.getElementById("saturn");
-   var hideSaturn = document.getElementById("planets");
    
    appearSaturn.classList.toggle("hide");
+}
+function hideSaturn(){
+   var hideSaturn = document.getElementById("planets");
+
    hideSaturn.classList.toggle("hide");
+}
+var buttonSaturn = document.getElementById("saturn-planet");
+buttonSaturn.addEventListener("click", function() {
+   hideSaturn();
+   hideMenuButton();
+   appearBack();
+   back();
+   require("Saturn");
+   setTimeout(() => appearSaturn(), 200);
 })
 
 // Urano //
-var buttonUrans = document.getElementById("urans-planet");
-
-buttonUrans.addEventListener("click", function() {
+function appearUrans() {
    var appearUrans = document.getElementById("urans");
-   var hideUrans = document.getElementById("planets");
    
    appearUrans.classList.toggle("hide");
+}
+function hideUrans(){
+   var hideUrans = document.getElementById("planets");
+
    hideUrans.classList.toggle("hide");
+}
+var buttonUrans = document.getElementById("urans-planet");
+buttonUrans.addEventListener("click", function() {
+   hideUrans();
+   hideMenuButton();
+   appearBack();
+   back();
+   require("Uranus");
+   setTimeout(() => appearUrans(), 200);
 })
 
 // Netuno //
-var buttonNeptune = document.getElementById("neptune-planet");
-
-buttonNeptune.addEventListener("click", function() {
+function appearNeptune() {
    var appearNeptune = document.getElementById("neptune");
-   var hideNeptune = document.getElementById("planets");
    
    appearNeptune.classList.toggle("hide");
+}
+function hideNeptune(){
+   var hideNeptune = document.getElementById("planets");
+
    hideNeptune.classList.toggle("hide");
+}
+var buttonNeptune = document.getElementById("neptune-planet");
+buttonNeptune.addEventListener("click", function() {
+   hideNeptune();
+   hideMenuButton();
+   appearBack();
+   back();
+   require("Neptune");
+   setTimeout(() => appearNeptune(), 200);
 })
