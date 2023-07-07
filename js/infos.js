@@ -10,6 +10,7 @@ for(i = 0; i < quantidadeCamadas; i++){
     camadaSelecionada = document.getElementById("ast-planet" + i);
     camadaSelecionada.style.transform = "translateZ(" + Math.sin(Math.PI/quantidadeCamadas * i) * 200 + "px) scale(" + Math.cos(Math.PI/quantidadeCamadas * i) + ")";
 }
+
 // Aneis de Saturno Info //
 var ringRep = document.getElementById('ring-saturn-rep');
 var quantidadeCamadasRep = 17;
@@ -43,6 +44,7 @@ function back() {
       window.location.reload();
    })
 }
+
 // Sol //
 function appearSun() {
    var appearSun = document.getElementById("sun");
@@ -59,11 +61,10 @@ buttonSun.addEventListener("click", function() {
    hideMenuButton();
    appearBack();
    back();
+   showLoading();
    require("Sun");
    setTimeout(() => appearSun(), 200);
 })
-
-
 
 // Mercurio //
 function appearMercury() {
@@ -82,6 +83,7 @@ buttonMercury.addEventListener("click", function() {
    hideMenuButton();
    appearBack();
    back();
+   showLoading();
    require("Mercury");
    setTimeout(() => appearMercury(), 200);
 })
@@ -103,6 +105,7 @@ buttonVenus.addEventListener("click", function() {
    hideMenuButton();
    appearBack();
    back();
+   showLoading();
    require("Venus");
    setTimeout(() => appearVenus(), 200);
 })
@@ -124,6 +127,7 @@ buttonEarth.addEventListener("click", function() {
    hideMenuButton();
    appearBack();
    back();
+   showLoading();
    require("Earth");
    setTimeout(() => appearEarth(), 200);
 })
@@ -145,6 +149,7 @@ buttonMars.addEventListener("click", function() {
    hideMenuButton();
    appearBack();
    back();
+   showLoading();
    require("Mars");
    setTimeout(() => appearMars(), 200);
 })
@@ -167,6 +172,7 @@ buttonJupiter.addEventListener("click", function() {
    hideMenuButton();
    appearBack();
    back();
+   showLoading();
    require("Jupiter");
    setTimeout(() => appearJupiter(), 200);
 })
@@ -189,29 +195,31 @@ buttonSaturn.addEventListener("click", function() {
    hideMenuButton();
    appearBack();
    back();
+   showLoading();
    require("Saturn");
    setTimeout(() => appearSaturn(), 200);
 })
 
 // Urano //
-function appearUrans() {
-   var appearUrans = document.getElementById("urans");
+function appearUranus() {
+   var appearUranus = document.getElementById("uranus");
    
-   appearUrans.classList.toggle("hide");
+   appearUranus.classList.toggle("hide");
 }
-function hideUrans(){
-   var hideUrans = document.getElementById("planets");
+function hideUranus(){
+   var hideUranus = document.getElementById("planets");
 
-   hideUrans.classList.toggle("hide");
+   hideUranus.classList.toggle("hide");
 }
-var buttonUrans = document.getElementById("urans-planet");
-buttonUrans.addEventListener("click", function() {
-   hideUrans();
+var buttonUranus = document.getElementById("uranus-planet");
+buttonUranus.addEventListener("click", function() {
+   hideUranus();
    hideMenuButton();
    appearBack();
    back();
+   showLoading();
    require("Uranus");
-   setTimeout(() => appearUrans(), 200);
+   setTimeout(() => appearUranus(), 200);
 })
 
 // Netuno //
@@ -231,6 +239,7 @@ buttonNeptune.addEventListener("click", function() {
    hideMenuButton();
    appearBack();
    back();
+   showLoading();
    require("Neptune");
    setTimeout(() => appearNeptune(), 200);
 })

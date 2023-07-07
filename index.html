@@ -6,13 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema Solar</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="ring_saturn.css">
     <link rel="stylesheet" href="ring_saturn_rep.css">
 </head>
 <body>
-    
+
+    <div class="fundo hide"></div>
+    <div class="loading">
+        <div class="animation-stars"></div>
+        <img src="img/pngwing.com.png" class="loadingScreen hide">
+        <h1 class="text-loading hide">Carregando...</h1>
+    </div>
+
+    <!-- MENU -->
     <div id="button" class="button"></div>
 
     <div id="menu" class="menu hide">
@@ -21,14 +29,15 @@
         <p class="text">Olá viajante, bem-vindo ao sistema solar! <br>Este site contem algumas informações sobre alguns astros que estão presentes em nossa galaxia, a Via Lactea. <br> Para ter acesso as informações, basta clicar em cima do planeta ou astro que desejar. <br> Tenha uma incrivel esperiencia e aproveite essa viajem!</p>
 
         <ul>
-            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
         </ul>
         <a href=""><img src=""></a>
         <a href="https://github.com/imnotdbs/planets-API-project" target="_blank"><img src="img/githublogo.png" class="logo-git"></a>
 
     </div>
 
-    <div id="planets" class="planets ">
+    <!-- SISTEMA SOLAR -->
+    <main id="planets" class="planets">
         
         <div class="sun-index" id="sun-index"></div>
 
@@ -53,15 +62,16 @@
                 <div class="ring-saturn" id="ring-saturn"></div>
             </div>
         </div>
-        <div class="urans-outline-1">
-            <div class="urans-planet" id="urans-planet"></div>
+        <div class="uranus-outline-1">
+            <div class="uranus-planet" id="uranus-planet"></div>
         </div>
         <div class="neptune-outline-1">
             <div class="neptune-planet" id="neptune-planet"></div>
         </div>
-    </div>
+    </main>
 
-    <div id="info-planets" class="info-planets">
+    <!-- INFORMAÇÕES -->
+    <main id="info-planets" class="info-planets">
 
         <div class="sun hide" id="sun">
             <div class="sun-rep" id="sun-rep"></div>
@@ -102,9 +112,9 @@
             </div>
         </div>
 
-        <div class="urans hide" id="urans">
-            <div class="urans-rep" id="urans-rep"></div>
-            <div class="info-urans"></div>
+        <div class="uranus hide" id="uranus">
+            <div class="uranus-rep" id="uranus-rep"></div>
+            <div class="info-uranus"></div>
         </div>
 
         <div class="neptune hide" id="neptune">
@@ -112,8 +122,13 @@
             <div class="info-neptune"></div>
         </div>
 
-    </div>
+    </main>
 
+
+
+
+
+    <!-- JAVASCRIPT -->
     <script src="js/API.js"></script>
     <script src="js/loading.js"></script>
     <script src="js/infos.js"></script>

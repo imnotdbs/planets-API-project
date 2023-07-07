@@ -105,7 +105,7 @@ async function docaAPI(planeta){
 
     criarp(planeta)
     var nomep = document.querySelector(".name-" + planeta[0].toLowerCase()+planeta.substring(1))
-    nomep.appendChild(document.createTextNode("Nome :"+ pNome));
+    nomep.appendChild(document.createTextNode("Nome: "+ pNome));
 
     var descp = document.querySelector(".desc-" + planeta[0].toLowerCase()+planeta.substring(1))
     descp.appendChild(document.createTextNode(pDesc));
