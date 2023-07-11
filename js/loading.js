@@ -1,4 +1,11 @@
+//////////////////////////////////
+// TELA DE CARREGAMENTO DA API //
+////////////////////////////////
+
+// FUNÇÃO PARA APARECER A TELA DE CARREGAMENTO //
 function showLoading(){
+
+    // Gerando as estrelas em movimento //
     const star = document.querySelector(".animation-stars");
 
     setInterval(() => {
@@ -21,6 +28,7 @@ function showLoading(){
         star.appendChild(stor);
     }, 13);
 
+    // Revelando a tela de carregamento //
     const rocket = document.querySelector(".loadingScreen");
     rocket.classList.toggle("hide")
 
@@ -32,10 +40,8 @@ function showLoading(){
 
     const text = document.querySelector(".text-loading");
     text.classList.toggle("hide");
-
-    setTimeout(() => hideLoading(), 2900);
 }
-
+// FUNÇÃO PARA SUMIR COM A TELA DE CARREGAMENTO APÓS O TEMPO ESPECIFICADO (Tempo de geração da API) //
 function hideLoading(){
     var loadings = document.getElementsByClassName("loading");
     if(loadings.length){

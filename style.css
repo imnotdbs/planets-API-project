@@ -5,9 +5,12 @@
     box-sizing: border-box;
 }
 @font-face {
-    src: url(fonte/FORCED\ SQUARE.ttf);
+    src: url(fonte/f1-secuencia-quad-ffp.ttf);
     font-family: 'raleway-regular';
-    font-weight: normal;
+}
+@font-face {
+    src: url(fonte/FORCED\ SQUARE.ttf);
+    font-family: 'forced';
 }
 
 body{
@@ -31,7 +34,7 @@ body{
     z-index: 99999999;
 }
 .text-loading{
-    font-family: 'raleway-regular';
+    font-family: 'forced';
     color: #fff;
     text-shadow: 0 0 10px #ffffffaa;
     position: absolute;
@@ -153,6 +156,7 @@ body{
     opacity: 100%;
 }
 .menu{
+    font-family:'Raleway-Regular';
     position: absolute;
     margin: 0;
     z-index: 10999;
@@ -170,22 +174,43 @@ body{
     top: 2%;
     z-index: 1;
 }
-.menu ul{
-    list-style: none;
+
+.bnt-sobre{
+    position: absolute;
+    font-size: 115%;
+    font-weight: bolder;
+    left: 40%;
+    top: 75%;
+    background: #13ebff18;
+    color: #fff;
+    text-shadow: 0 0 3px #ffffffb5;
+    padding: 0.5rem;
+    border-radius: 10%;
+    border: 1.5px solid #fff;
+    text-decoration: none;
+    opacity: 100%;
+    transition: 0.3s;
+}
+.bnt-sobre:hover{
+    text-decoration: none;
+    color: #fff;
+    opacity: 80%;
+    box-shadow: 0 0 10px 1px #ffffffd8;
 }
 
-.bv{
-    color: rgba(167, 33, 33, 1);
+.bv{  
     font-style: italic;
     font-weight: bold;
-    font-size: 25px;
-    position: relative;
     text-align: center;
+    font-size: 4.5vh;
+    letter-spacing: 0.09vh;
+    text-shadow: 0 0 5.5px #ffffffb5;
     top: -5px;
 }
 .text{
-    color: rgb(255, 255, 255);
-    font-size: 20px;
+    font-size: 2.8vh;
+    letter-spacing: 0.1vh;
+    text-shadow: 0 2.5px 2px #000000e0;
     position: relative;
     text-align: center;
 }
@@ -195,7 +220,7 @@ body{
     height: 40px;
     opacity: 100%;
     left: 45%;
-    top: 85%;
+    top: 88%;
 }
 .logo-git:hover{
     vertical-align: middle;
@@ -296,7 +321,7 @@ body{
 }
 .mercury-planet:hover{
     zoom: 101.5%;
-    box-shadow: 0 0 1px 0.7px #fff;
+    box-shadow: 0 0 10px 1px #fff;
 }
 
 /*Animação da orbita de Mercurio*/
@@ -347,7 +372,7 @@ body{
 }
 .venus-planet:hover{
     zoom: 101.3%;
-    box-shadow: 0 0 1px 0.7px #fff;
+    box-shadow: 0 0 10px 1px #fff;
 }
 /*Animação da orbita de Venus*/
 @keyframes rotationOrbitVenus{
@@ -397,7 +422,7 @@ body{
 }
 .earth-planet:hover{
     zoom: 101%;
-    box-shadow: 0 0 1px 0.7px #fff;
+    box-shadow: 0 0 10px 1px #fff;
 }
 /*Animação da orbita da Terra*/
 @keyframes rotationOrbitEarth{
@@ -449,7 +474,7 @@ body{
 }
 .mars-planet:hover{
     zoom: 100.6%;
-    box-shadow: 0 0 1px 0.7px #fff;
+    box-shadow: 0 0 10px 1px #fff;
 }
 /*Animação da orbita de Marte*/
 @keyframes rotationOrbitMars{
@@ -485,23 +510,23 @@ body{
 }
 .jupiter-planet::before{
 	content: "";
-	border-radius: 37.5%;
-	box-shadow: -11px 0px 3.9px rgba(0, 0, 0, 0.62) inset;
+	border-radius: 50%;
+	box-shadow: -10px 0px 5px rgba(0, 0, 0, 0.62) inset;
 	position:absolute;
 	height: 46px;
 	width: 46px;
 }
 .jupiter-planet::after{
 	content: "";
-	border-radius: 50%;
-	box-shadow: 0px 0px 16px rgb(0, 0, 0) inset;
+	border-radius: 50%;	
+    box-shadow: -19px 0px 5.4px rgba(0, 0, 0, 0.585) inset;
 	position:absolute;
 	height: 46px;
 	width: 46px;
 }
 .jupiter-planet:hover{
     zoom: 100.6%;
-    box-shadow: 0 0 1px 1px #fff;
+    box-shadow: 0 0 10px 1px #fff;
 }
 
 /*Animação da orbita de Jupiter*/
@@ -521,71 +546,57 @@ body{
     width: 565px;
 }
 .saturn-planet{
-    width: 37px;
-    height: 37px;
-    top: 46.7%;
-    left: 46.7%;
+    width: 25px;
+    height: 25px;
+    background: url(img/planets_index/mapa_saturno.jpg);
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: 100%;
+    top: 47.8%;
+    left: 47.8%;
     border-radius: 50%;
     position: absolute;
-    z-index: -99;
+    z-index: -9;
     transform: translateX(-50% -50%);
-    animation: rotationOrbitSaturn 82s linear infinite,  girar 60s linear infinite;;
+    animation: rotationOrbitSaturn 82s linear infinite,  girar 60s linear infinite;
     
 }   
-.saturn-img::before{
+.saturn-planet::before{
 	content: "";
-	border-radius: 37%;
+	border-radius: 50%;
 	box-shadow: -8.5px 0px 3.9px rgba(0, 0, 0, 0.71) inset;
 	position:absolute;
-	height: 28px;
-	width: 28px;
+	height: 25px;
+	width: 25px;
+    z-index: -9;
 }
-.saturn-img::after{
+.saturn-planet::after{
 	content: "";
 	border-radius: 50%;
 	box-shadow: 0px 0px 4px rgb(0, 0, 0) inset;
 	position:absolute;
-	height: 28px;
-	width: 28px;
+	height: 25px;
+	width: 25px;
+    z-index: -9;
 }
-.saturn-img{
-    position: absolute;
-    height: 28px;
-    width: 28px;
-    border-radius: 50%;
-    background: url(img/planets_index/mapa_saturno.jpg);
-    background-size: 200%;
-    z-index: -100;
-    transform-style: preserve-3d;
+.saturn-planet:hover{
+    zoom: 100.6%;
+    box-shadow: 0 0 10px 1px #fff;
 }
 .ring-saturn{
-    top: -10%;
-    left: -9px;
-    right: 0;
-    margin: auto;
-    width: 35px;
-    height: 35px;
-    border: 0.8px dotted #d4d4d4;
-    border-right: 1px dotted transparent;
-    border-radius: 50%;
-    animation: animationRing1 24s linear infinite;
-    z-index: -200;
-}
-.ring-saturn, section{
+    width: 50px;
+    height: 50px;
+    background: url(img/planets_index/pngaaa.com-3951197.png);
+    background-size: 100%;
     position: absolute;
-    border-radius: 50%;
-    background-color: transparent;
-    transform-style: preserve-3d;
+    left: -12.5px;
+    top: -13px;
+    transform: rotateX(80deg);
+    z-index: -8;
+    opacity: 70%;
 }
-/*Animação dos Aneis de Saturno*/
-@keyframes animationRing1 {
-    0% {
-        transform: rotateX(-75deg) rotateY(-20deg) rotateZ(0deg);
-    }
-    100% {
-        transform: rotateX(-75deg) rotateY(-20deg) rotateZ(360deg);
-    }
-}
+
+
 /*Animação da orbita de Saturno*/
 @keyframes rotationOrbitSaturn{
     0%{
@@ -636,7 +647,7 @@ body{
 }
 .uranus-planet:hover{
     zoom: 100.4%;
-    box-shadow: 0 0 1px 1px #fff;
+    box-shadow: 0 0 10px 1px #fff;
 }
 /*Animação da orbita de Urano*/
 @keyframes rotationOrbitUranus{
@@ -688,7 +699,7 @@ body{
 }
 .neptune-planet:hover{
     zoom: 100.4%;
-    box-shadow: 0 0 1px 1px #fff;
+    box-shadow: 0 0 10px 1px #fff;
 }
 /*Animação da orbita de Netuno*/
 @keyframes rotationOrbitNeptune{
@@ -701,7 +712,73 @@ body{
 }
 
 /*//ABA INFORMAÇÕES//*/
+.info-sun, .info-mercury, .info-venus, .info-earth, .info-mars, .info-jupiter, .info-saturn, .info-uranus, .info-neptune {
+    font-family: 'Raleway-Regular';
+    font-size: 3.5vh;
+    text-align: left;
+    color: #fff;
+    padding: 1.5%;
+    padding-top: 1%;
+    background-color: #13ebff2b;
+    border-radius: 5px 50px 50px 100px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    height: 90vh;
+    width: 80vh;
+    position: absolute;
+    left: 58%;
+    top: 5%;
+    z-index: 99;
+}
+.name-sun, .name-mercury, .name-venus, .name-earth, .name-mars, .name-jupiter, .name-saturn, .name-uranus, .name-neptune{
+    font-family:'Raleway-Regular';
+    text-align: center;
+    font-size: 6vh;
+    letter-spacing: 0.09vh;
+    text-shadow: 0 0 4.5px #ffffffd2;
+}
+.desc-sun, .desc-mercury, .desc-venus, .desc-earth, .desc-mars, .desc-jupiter, .desc-saturn, .desc-uranus, .desc-neptune{
+    font-size: 3.8vh;
+    text-align: justify;
+    letter-spacing: 0.1vh;
+    text-shadow: 0 2.5px 2px #000000e0;
+}
+.desc-jupiter, .desc-neptune{
+    font-size: 3.4vh;
+}
+.age-sun, .age-mercury, .age-venus, .age-earth, .age-mars, .age-jupiter, .age-saturn, .age-uranus, .age-neptune{
 
+    font-size: 3.8vh;
+    text-align: justify;
+    padding-left: 20px;
+    text-shadow: 0 2.5px 2px #000000e0;
+}
+.density-sun, .density-mercury, .density-venus, .density-earth, .density-mars, .density-jupiter, .density-saturn, .density-uranus, .density-neptune {
+    font-size: 3.8vh;
+    text-align: justify;
+    padding-left: 20px;
+    text-shadow: 0 2.5px 2px #000000e0;
+}
+.radius-sun, .radius-mercury, .radius-venus, .radius-earth, .radius-mars, .radius-jupiter, .radius-saturn, .radius-uranus, .radius-neptune {
+    font-size: 3.8vh;
+    text-align: justify;
+    padding-left: 20px;
+    text-shadow: 0 2.5px 2px #000000e0;
+}
+.aphelion-sun, .aphelion-mercury, .aphelion-venus, .aphelion-earth, .aphelion-mars, .aphelion-jupiter, .aphelion-saturn, .aphelion-uranus, .aphelion-neptune {
+    font-size: 3.8vh;
+    text-align: justify;
+    padding-left: 20px;
+    text-shadow: 0 2.5px 2px #000000e0;
+}
+.paraphelion-sun, .paraphelion-mercury, .paraphelion-venus, .paraphelion-earth, .paraphelion-mars, .paraphelion-jupiter, .paraphelion-saturn, .paraphelion-uranus, .paraphelion-neptune {
+    font-size: 3.8vh;
+    text-align: justify;
+    padding-left: 20px;
+    text-shadow: 0 2.5px 2px #000000e0;
+}
+
+/*REPRESENTAÇOES*/
 .sun-rep{
     background: url(img/planets_info/sol.jpg);
     background-size: 222%;
@@ -728,23 +805,6 @@ body{
     top: -1px;
 }
 
-.info-sun{
-    font-family: 'Raleway-Regular';
-    font-size: 2.80vh;
-    color: #fff;
-    padding: 1.5%;
-    background-color: #13ebff2b;
-    border-radius: 5px 50px 50px 100px;
-    border-left: 2px solid;
-    border-bottom: 2px solid;
-    height: 90vh;
-    width: 80vh;
-    position: absolute;
-    left: 58%;
-    top: 5%;
-    z-index: 99;
-}
-
 .mercury-rep{
     background: url(img/planets_info/mapa_mercurio.jpg);
     background-size: 222%;
@@ -757,7 +817,7 @@ body{
     border-radius: 50%;
     position: absolute;
     transform-style: preserve-3d;
-    animation: girarInfo 150s linear infinite;
+    animation: girarInfo 180s linear infinite;
 }
 .mercury-rep:before{
 	content: "";
@@ -778,21 +838,6 @@ body{
 	width: 400px;
     left: -1px;
     top: -1px;
-}
-.info-mercury{
-    font-family: 'Raleway-Regular';
-    font-size: 2.80vh;
-    color: #fff;
-    padding: 1.5%;
-    background-color: #13ebff2b;
-    border-radius: 5px 50px 50px 100px;
-    border-left: 2px solid;
-    border-bottom: 2px solid;
-    height: 90vh;
-    width: 80vh;
-    position: absolute;
-    left: 58%;
-    top: 5%;
 }
 
 .venus-rep{
@@ -826,21 +871,6 @@ body{
 	width: 400px;
     left: -1px;
     top: -1px;
-}
-.info-venus{
-    font-family: 'Raleway-Regular';
-    font-size: 2.80vh;
-    color: #fff;
-    padding: 1.5%;
-    background-color: #13ebff2b;
-    border-radius: 5px 50px 50px 100px;
-    border-left: 2px solid;
-    border-bottom: 2px solid;
-    height: 90vh;
-    width: 80vh;
-    position: absolute;
-    left: 58%;
-    top: 5%;
 }
 
 .earth-rep{
@@ -877,21 +907,6 @@ body{
     left: -1px;
     top: -1px;
 }
-.info-earth{
-    font-family: 'Raleway-Regular';
-    font-size: 2.80vh;
-    color: #fff;
-    padding: 1.5%;
-    background-color: #13ebff2b;
-    border-radius: 5px 50px 50px 100px;
-    border-left: 2px solid;
-    border-bottom: 2px solid;
-    height: 90vh;
-    width: 80vh;
-    position: absolute;
-    left: 58%;
-    top: 5%;
-}
 
 .mars-rep{
     background: url(img/planets_info/mapa_marte.jpg);
@@ -927,21 +942,6 @@ body{
     left: -1px;
     top: -1px;
 }
-.info-mars{
-    font-family: 'Raleway-Regular';
-    font-size: 2.80vh;
-    color: #fff;
-    padding: 1.5%;
-    background-color: #13ebff2b;
-    border-radius: 5px 50px 50px 100px;
-    border-left: 2px solid;
-    border-bottom: 2px solid;
-    height: 90vh;
-    width: 80vh;
-    position: absolute;
-    left: 58%;
-    top: 5%;
-}
 
 .jupiter-rep{
     background: url(img/planets_info/mapa_jupiter.jpg);
@@ -976,21 +976,6 @@ body{
 	width: 400px;
     left: -1px;
     top: -1px;
-}
-.info-jupiter{
-    font-family: 'Raleway-Regular';
-    font-size: 2.80vh;
-    color: #fff;
-    padding: 1.5%;
-    background-color: #13ebff2b;
-    border-radius: 5px 50px 50px 100px;
-    border-left: 2px solid;
-    border-bottom: 2px solid;
-    height: 90vh;
-    width: 80vh;
-    position: absolute;
-    left: 58%;
-    top: 5%;
 }
 .saturn-rep{
     width: 400px;
@@ -1057,21 +1042,15 @@ body{
     transform-style: preserve-3d;
     border-radius: 50%;
 }
-
-.info-saturn{
-    font-family: 'Raleway-Regular';
-    font-size: 2.80vh;
-    color: #fff;
-    padding: 1.5%;
-    background-color: #13ebff2b;
-    border-radius: 5px 50px 50px 100px;
-    border-left: 2px solid;
-    border-bottom: 2px solid;
-    height: 90vh;
-    width: 80vh;
-    position: absolute;
-    left: 58%;
-    top: 5%;
+@keyframes animationRing1 {
+    0%{
+        transform: rotateX(-75deg) rotateY(-20deg)
+        rotateZ(0deg);
+    }
+    100%{
+        transform: rotateX(-75deg) rotateY(-20deg)
+        rotateZ(360deg);
+    }
 }
 
 .uranus-rep{
@@ -1108,21 +1087,6 @@ body{
     left: -1px;
     top: -1px;
 }
-.info-uranus{
-    font-family: 'Raleway-Regular';
-    font-size: 2.80vh;
-    color: #fff;
-    padding: 1.5%;
-    background-color: #13ebff2b;
-    border-radius: 5px 50px 50px 100px;
-    border-left: 2px solid;
-    border-bottom: 2px solid;
-    height: 90vh;
-    width: 80vh;
-    position: absolute;
-    left: 58%;
-    top: 5%;
-}
 
 .neptune-rep{
     background: url(img/planets_info/mapa_netuno.jpg);
@@ -1158,21 +1122,7 @@ body{
     left: -1px;
     top: -1px;
 }
-.info-neptune{
-    font-family: 'Raleway-Regular';
-    font-size: 2.80vh;
-    color: #fff;
-    padding: 1.5%;
-    background-color: #13ebff2b;
-    border-radius: 5px 50px 50px 100px;
-    border-left: 2px solid;
-    border-bottom: 2px solid;
-    height: 90vh;
-    width: 80vh;
-    position: absolute;
-    left: 58%;
-    top: 5%;
-}
+
 /*Animações Gerais*/
 @keyframes girar {
     0% { background-position: 0 0;}

@@ -1,3 +1,4 @@
+/* // POSIÇÃO E DESIGN DO ANEL DE SATURNO // */
 #ast-rep1 {
     border: 2px dotted #80656f;
     border-right: 3px dotted transparent;
@@ -159,6 +160,7 @@
     animation: animationRing2 23s linear infinite;
 }
 
+/* // ANIMAÇÃO DO ANEL DE SATURNO // */
 @keyframes animationRing2 {
     0% {
         transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);

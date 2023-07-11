@@ -1,3 +1,8 @@
+////////////////////////
+// ZOOM DOS PLANETAS //
+//////////////////////
+
+// FUNCÇÃO NA RODA DO MOUSE PARA DAR ZOOM E RETIRAR O ZOOM (Ela se repete para cada planeta) //
 let zoomElementSun = document.querySelector("#sun-rep");
 let $zoomSun = 1;
 document.addEventListener("wheel", function (e) {
@@ -68,13 +73,13 @@ document.addEventListener("wheel", function (e) {
     }
 })
 
-let zoomElementUrans = document.querySelector("#urans-rep");
-let $zoomUrans = 1;
+let zoomElementUranus = document.querySelector("#uranus-rep");
+let $zoomUranus = 1;
 document.addEventListener("wheel", function (e) {
     if (e.deltaY > 0) {
-        zoomElementUrans.style.transform = `scale(${($zoomUrans -= 0.06)})`
+        zoomElementUranus.style.transform = `scale(${($zoomUranus -= 0.06)})`
     } else {
-        zoomElementUrans.style.transform = `scale(${($zoomUrans += 0.06)})`
+        zoomElementUranus.style.transform = `scale(${($zoomUranus += 0.06)})`
     }
 })
 

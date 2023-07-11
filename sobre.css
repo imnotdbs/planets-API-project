@@ -1,3 +1,7 @@
+@font-face {
+    src: url(fonte/f1-secuencia-quad-ffp.ttf);
+    font-family: 'raleway-regular';
+}
 body{
     display: flex;
     width: 100%;
@@ -8,11 +12,12 @@ body{
 
 .linha{
     margin: 0;
-    margin-top: 15%;
+    margin-top: 3%;
     margin-left: 0%;
 }
 
 .card-edit{
+    font-family: 'Roleway-Regular';
     background-color: #13ebff2b;
     color: #fff;
     border: 1px solid #fff;
@@ -30,9 +35,27 @@ body{
     border-radius: 25px 25px 25px 25px;
     padding: 1vh;
 }
+.card-title{
+    font-family:'Raleway-Regular';
+    text-align: center;
+    font-size: 3.7vh;
+    font-weight: bold;
+    letter-spacing: 0.09vh;
+    text-shadow: 0 0 4.5px #ffffffd2;
+}
+.card-text{
+    font-family:'Raleway-Regular';
+    font-size: 2.8vh;
+    text-align: justify;
+    letter-spacing: 0.1vh;
+    text-shadow: 0 2.5px 2px #000000e0;
+}
 .prt{
+    font-family:'Raleway-Regular';
+    font-weight: bold;
     background: #13ebff18;
     color: #fff;
+    text-shadow: 0 0 3.5px #ffffffd2;
     padding: 0.5rem;
     border-radius: 10%;
     border: 1px solid #fff;
