@@ -384,7 +384,7 @@ body{
     }
 }
 
-/*Earth*/
+/* TERRA */
 .earth-outline-1{
     z-index: 6;
     height: 310px;
@@ -765,13 +765,16 @@ body{
     padding-left: 20px;
     text-shadow: 0 2.5px 2px #000000e0;
 }
-.aphelion-sun, .aphelion-mercury, .aphelion-venus, .aphelion-earth, .aphelion-mars, .aphelion-jupiter, .aphelion-saturn, .aphelion-uranus, .aphelion-neptune {
+.aphelion-sun, .paraphelion-sun{
+    display: none;
+}
+.aphelion-mercury, .aphelion-venus, .aphelion-earth, .aphelion-mars, .aphelion-jupiter, .aphelion-saturn, .aphelion-uranus, .aphelion-neptune {
     font-size: 3.8vh;
     text-align: justify;
     padding-left: 20px;
     text-shadow: 0 2.5px 2px #000000e0;
 }
-.paraphelion-sun, .paraphelion-mercury, .paraphelion-venus, .paraphelion-earth, .paraphelion-mars, .paraphelion-jupiter, .paraphelion-saturn, .paraphelion-uranus, .paraphelion-neptune {
+.paraphelion-mercury, .paraphelion-venus, .paraphelion-earth, .paraphelion-mars, .paraphelion-jupiter, .paraphelion-saturn, .paraphelion-uranus, .paraphelion-neptune {
     font-size: 3.8vh;
     text-align: justify;
     padding-left: 20px;
@@ -843,7 +846,7 @@ body{
 .venus-rep{
     background: url(img/planets_info/mapa_venus.jpg);
     background-size: cover;
-    border: 1px solid rgba(102, 72, 44, 0.3);
+    border: 1px solid rgba(30, 21, 13, 0.3);
     width: 400px;
     height: 400px;
     top: 22%;
@@ -872,20 +875,20 @@ body{
     left: -1px;
     top: -1px;
 }
-
+/* TERRA INFORMAÇÃO */
 .earth-rep{
     background: url(img/planets_info/mapa_terra.jpg);
     background-size: 222%;
     border: 1px solid rgba(26,18,101,0.3);
-    width: 400px;
-    height: 400px;
-    top: 22%;
-    left: 16%;
+    width: 350px;
+    height: 350px;
+    top: 24%;
+    left: 10%;
     z-index: -9999;
     border-radius: 50%;
     position: absolute;
     transform-style: preserve-3d;
-    animation: girarInfo 150s linear infinite;
+    animation: girarInfo 180s linear infinite;
 }
 .earth-rep:before{
 	content: "";
@@ -894,19 +897,51 @@ body{
 	left: 0px;
 	position:absolute;
 	top: 0px;
-	height: 400px;
-	width: 400px;
+	height: 350px;
+	width: 350px;
 }
 .earth-rep::after{
 	content: "";
 	border-radius: 50%;
 	box-shadow: 0px 0px 50px rgb(0, 0, 0, 0.6) inset;
 	position: absolute;
-	height: 400px;
-	width: 400px;
+	height: 350px;
+	width: 350px;
     left: -1px;
     top: -1px;
 }
+.moon-earth{
+    background: url(img/planets_info/mapa_lua_terra.jpg);
+    background-size: 200%;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    left: 141%;
+    top: 10%;
+    animation: girarInfo2 140s linear infinite;
+}
+.moon-earth:before{
+	content: "";
+	border-radius: 50%;
+	box-shadow: -7px 0px 15px rgb(0, 0, 0) inset;
+	left: 0px;
+	position:absolute;
+	top: 0px;
+	height: 45.5px;
+	width: 45.5px;
+}
+.moon-earth::after{
+	content: "";
+	border-radius: 50%;
+	box-shadow: 0px 0px 27px rgba(0, 0, 0, 0.6) inset;
+	position: absolute;
+	height: 45px;
+	width: 45px;
+    left: 0px;
+    top: 0px;
+}
+
 
 .mars-rep{
     background: url(img/planets_info/mapa_marte.jpg);
@@ -1136,5 +1171,10 @@ body{
 @keyframes girarInfo {
     0% { background-position: 0 0;}
 	100%{ background-position: -900px 0;}
+
+}
+@keyframes girarInfo2 {
+    0% { background-position: 0 0;}
+	100%{ background-position: 900px 0;}
 
 }

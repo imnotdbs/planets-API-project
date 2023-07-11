@@ -16,8 +16,10 @@ for(i = 0; i < quantidadeCamadasRep; i++){
 // Codigos para fazer aparecer e sumir o menu da tela do sistema solar //
 function hideMenuButton(){
    var hideMenuButton = document.getElementById("button");
+   var hideMenuScreen = document.getElementById("menu");
 
-   hideMenuButton.remove()
+   hideMenuScreen.remove();
+   hideMenuButton.remove();
 }
 function appearBack(){
    let appearBack = document.getElementById ("info-planets");
@@ -132,6 +134,7 @@ buttonEarth.addEventListener("click", async function() {
    hideMenuButton();
    appearBack();
    back();
+   createMoonEarth()
    showLoading();
    await require("Earth");
    appearEarth();

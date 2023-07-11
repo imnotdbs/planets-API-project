@@ -41,7 +41,7 @@ function showLoading(){
     const text = document.querySelector(".text-loading");
     text.classList.toggle("hide");
 }
-// FUNÇÃO PARA SUMIR COM A TELA DE CARREGAMENTO APÓS O TEMPO ESPECIFICADO (Tempo de geração da API) //
+// FUNÇÃO PARA SUMIR COM O MENU (caso esteja aberto) //
 function hideLoading(){
     var loadings = document.getElementsByClassName("loading");
     if(loadings.length){

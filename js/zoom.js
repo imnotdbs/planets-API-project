@@ -2,7 +2,7 @@
 // ZOOM DOS PLANETAS //
 //////////////////////
 
-// FUNCÇÃO NA RODA DO MOUSE PARA DAR ZOOM E RETIRAR O ZOOM (Ela se repete para cada planeta) //
+// FUNÇÃO NA RODA DO MOUSE PARA DAR ZOOM E RETIRAR O ZOOM (Ela se repete para cada planeta) //
 let zoomElementSun = document.querySelector("#sun-rep");
 let $zoomSun = 1;
 document.addEventListener("wheel", function (e) {
