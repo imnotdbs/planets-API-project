@@ -2,6 +2,17 @@
 // ZOOM DOS PLANETAS //
 //////////////////////
 
+// Dar zoom no sistema solar //
+let zoomElementSolarSistem = document.querySelector("#planets");
+let $zoomSolarSistem = 1;
+document.addEventListener("wheel", function (e) {
+    if (e.deltaY > 0) {
+        zoomElementSolarSistem.style.transform = `scale(${($zoomSolarSistem -= 0.06)})`
+    } else {
+        zoomElementSolarSistem.style.transform = `scale(${($zoomSolarSistem += 0.06)})`
+    }
+})
+
 // FUNÇÃO NA RODA DO MOUSE PARA DAR ZOOM E RETIRAR O ZOOM (Ela se repete para cada planeta) //
 let zoomElementSun = document.querySelector("#sun-rep");
 let $zoomSun = 1;

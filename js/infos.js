@@ -136,9 +136,10 @@ buttonEarth.addEventListener("click", async function() {
    back();
    createMoonEarth()
    showLoading();
-   await require("Earth");
    appearEarth();
+   await require("Earth");
 })
+
 
 // Marte //
 // Função para aprecer a tela aonde se encontra a API do Sol //

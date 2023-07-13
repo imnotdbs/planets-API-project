@@ -730,6 +730,33 @@ body{
     top: 5%;
     z-index: 99;
 }
+#info-moon{
+    font-family: 'Raleway-Regular';
+    font-size: 3.5vh;
+    text-align: left;
+    color: #fff;
+    padding: 1.5%;
+    padding-top: 1%;
+    background-color: #13ebff20;
+    border-radius: 10px;
+    border-bottom: 2px solid;
+    height: 10vh;
+    width: 20vh;
+    position: absolute;
+    left: -122%;
+    top: -220%;
+    z-index: 99;
+}
+#info-moon::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background: #fff;
+    top: 100%;
+    left: 50%;
+    border-radius: 50%;
+}
 .name-sun, .name-mercury, .name-venus, .name-earth, .name-mars, .name-jupiter, .name-saturn, .name-uranus, .name-neptune{
     font-family:'Raleway-Regular';
     text-align: center;
