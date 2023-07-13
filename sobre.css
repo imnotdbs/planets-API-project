@@ -12,10 +12,16 @@ body{
 
 .linha{
     margin: 0;
-    margin-top: 3%;
+    margin-top: 2%;
     margin-left: 0%;
 }
-
+.txt-cbc{
+    font-family:'Raleway-Regular';
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.09vh;
+    text-shadow: 0 0 6.5px #ffffffd2;
+}
 .card-edit{
     font-family: 'Roleway-Regular';
     background-color: #13ebff2b;

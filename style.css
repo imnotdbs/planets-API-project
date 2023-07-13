@@ -80,8 +80,8 @@ body{
 
 /* Menu */
 .button{
-    position: relative;
-    top: 2%;
+    position: absolute;
+    top: 1.8%;
     left: 1.5%;
     width: 50px;
     height: 50px;
@@ -159,6 +159,7 @@ body{
     font-family:'Raleway-Regular';
     position: absolute;
     margin: 0;
+    max-height: 600px;
     z-index: 10999;
     justify-content: center;
     align-items: center;
@@ -169,18 +170,16 @@ body{
     border-bottom: 2px solid;
     padding: 0.9%;
     width: 27%;
-    height: 65%;
+    height: 100%;
     left: 1.5%;
     top: 2%;
     z-index: 1;
 }
 
 .bnt-sobre{
-    position: absolute;
+    position: relative;
     font-size: 115%;
     font-weight: bolder;
-    left: 40%;
-    top: 75%;
     background: #13ebff18;
     color: #fff;
     text-shadow: 0 0 3px #ffffffb5;
@@ -213,14 +212,16 @@ body{
     text-shadow: 0 2.5px 2px #000000e0;
     position: relative;
     text-align: center;
+    margin-bottom: 12%;
+}
+.linha-gth{
+    margin-top: 10%;
 }
 .logo-git{
-    position: absolute;
+    position: relative;
     width: 40px;
     height: 40px;
     opacity: 100%;
-    left: 45%;
-    top: 88%;
 }
 .logo-git:hover{
     vertical-align: middle;
@@ -743,7 +744,7 @@ body{
     height: 10vh;
     width: 20vh;
     position: absolute;
-    left: -122%;
+    left: -125%;
     top: -220%;
     z-index: 99;
 }
@@ -967,6 +968,11 @@ body{
 	width: 45px;
     left: 0px;
     top: 0px;
+}
+.moon-earth:hover{
+    zoom: 105%;
+    transition: 0.2s;
+    box-shadow: 0px 0px 24px #ffffff;
 }
 
 
