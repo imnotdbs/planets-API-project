@@ -232,7 +232,7 @@ body{
 
 
 /*Linhas de rotação*/
-.mercury-outline,.venus-outline-1,.earth-outline-1,.mars-outline-1,.jupiter-outline-1,.saturno-outline-1,.uranus-outline-1,.neptune-outline-1{
+.mercury-outline-1,.venus-outline-1,.earth-outline-1,.mars-outline-1,.jupiter-outline-1,.saturn-outline-1,.uranus-outline-1,.neptune-outline-1{
     border-radius: 50%;
     border: 1px dotted rgba(221, 221, 221, 1);
     position: absolute;
@@ -284,7 +284,7 @@ body{
 }
 
 /*Mercurio*/
-.mercury-outline{
+.mercury-outline-1{
     z-index: 8;
     height: 141px;
     width: 141px;
@@ -541,7 +541,7 @@ body{
 }
 
 /*Saturno*/
-.saturno-outline-1{
+.saturn-outline-1{
     z-index: 3;
     height: 565px;
     width: 565px;
