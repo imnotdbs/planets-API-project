@@ -1,7 +1,9 @@
+/* // Fonte ultilizada // */
 @font-face {
     src: url(fonte/f1-secuencia-quad-ffp.ttf);
     font-family: 'raleway-regular';
 }
+/* // Corpo da pagina // */
 body{
     display: flex;
     width: 100%;
@@ -10,11 +12,43 @@ body{
     background-size: 100%;
 }
 
+/* // Row // */
 .linha{
     margin: 0;
     margin-top: 2%;
     margin-left: 0%;
 }
+
+/* // Header // */
+.back{
+    position: absolute;
+    top: 2%;
+    left: 1.5%;
+    width: 50px;
+    height: 50px;
+    background: #13ebff2b;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+    z-index: 9000000;
+    opacity: 25%;
+}
+.back::before{
+    content: '';
+    position: absolute;
+    padding: 10px;
+    box-shadow: 2px -2px 0 1px #fff inset;
+    border: solid transparent;
+    border-width: 0 0 2px 2px;
+    transform: rotate(45deg);
+}
+.back:hover{
+    opacity: 100%;
+}
+
 .txt-cbc{
     font-family:'Raleway-Regular';
     color: #fff;
@@ -22,6 +56,8 @@ body{
     letter-spacing: 0.09vh;
     text-shadow: 0 0 6.5px #ffffffd2;
 }
+
+/* // Cards // */
 .card-edit{
     font-family: 'Roleway-Regular';
     background-color: #13ebff2b;
@@ -90,33 +126,4 @@ body{
     vertical-align: middle;
     transition: all 0.3s;
     opacity: 50%;
-}
-
-.back{
-    position: absolute;
-    top: 2%;
-    left: 1.5%;
-    width: 50px;
-    height: 50px;
-    background: #13ebff2b;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.2s;
-    z-index: 9000000;
-    opacity: 25%;
-}
-.back::before{
-    content: '';
-    position: absolute;
-    padding: 10px;
-    box-shadow: 2px -2px 0 1px #fff inset;
-    border: solid transparent;
-    border-width: 0 0 2px 2px;
-    transform: rotate(45deg);
-}
-.back:hover{
-    opacity: 100%;
 }
